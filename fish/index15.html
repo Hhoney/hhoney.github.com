@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="智能社 - zhinengshe.com" />
+<meta name="copyright" content="智能社 - zhinengshe.com" />
+<meta name="description" content="智能社是一家专注于web前端开发技术的公司，目前主要提供JavaScript培训和HTML5培训两项服务，同时还推出了大量javascript基础知识教程，智能课堂为你带来全新的学习方法和快乐的学习体验。" />
+<title>智能社— http://www.zhinengshe.com</title>
+<style>
+*{margin:0; padding:0;}
+body{background:#000; text-align:center;}
+canvas{background:url(img/game_bg_2_hd.jpg) no-repeat;}
+</style>
+<script src="js/common.js"></script>
+<script src="js/sprite.js"></script>
+<script src="js/fish.js"></script>
+<script src="js/cannon.js"></script>
+<script src="js/bullet.js"></script>
+<script>
+window.onload=function(){
+	var oC = document.getElementById('c1');
+	var gd = oC.getContext('2d');
+	loadImages({
+		'bottom':'img/bottom.png',
+		'bullet':'img/bullet.png',
+		'cannon1':'img/cannon1.png',
+		'cannon2':'img/cannon2.png',
+		'cannon3':'img/cannon3.png',
+		'cannon4':'img/cannon4.png',
+		'cannon5':'img/cannon5.png',
+		'cannon6':'img/cannon6.png',
+		'cannon7':'img/cannon7.png',
+		'coinAni1':'img/coinAni1.png',
+		'fish1':'img/fish1.png',
+		'fish2':'img/fish2.png',
+		'fish3':'img/fish3.png',
+		'fish4':'img/fish4.png',
+		'fish5':'img/fish5.png'
+	},function(images){
+		var bottom = new Sprite(images.bottom);
+		bottom.w = 765;
+		bottom.h = 72;
+		bottom.x = oC.width/2;
+		bottom.y = oC.height-bottom.h/2;
+		
+		var cannon = new Cannon(images,7);
+		cannon.x = bottom.x+40;
+		cannon.y = bottom.y;
+		
+		oC.onmousemove=function(ev){
+			var a = ev.pageX-oC.offsetLeft;
+			var b = ev.pageY-oC.offsetTop;
+			var x = a-cannon.x;
+			var y = b-cannon.y;
+			
+			cannon.r = a2d(Math.atan2(y,x))+90;
+		};
+		
+		var aFish = [];
+		setInterval(function(){
+			var fish = new Fish(images,rnd(1,6));
+			fish.x = -50;
+			fish.y = rnd(0,oC.height);
+			fish.r = rnd(60,120);
+			aFish.push(fish);
+		},500);
+		
+		
+		var aBullet = [];
+		oC.onclick=function(){
+			var bullet = new Bullet(images.bullet,cannon.type);
+			bullet.r = cannon.r;
+			bullet.x = cannon.x;
+			bullet.y = cannon.y;
+			aBullet.push(bullet);
+			
+		};
+		
+		setInterval(function(){
+			gd.clearRect(0,0,oC.width,oC.height);
+			bottom.draw(gd);
+			
+			
+			for(var i=0;i<aFish.length;i++){
+				aFish[i].move();
+				aFish[i].draw(gd);
+			}
+			for(var i=0;i<aBullet.length;i++){
+				aBullet[i].move();
+				aBullet[i].draw(gd);
+			}
+			
+			cannon.draw(gd);
+			
+			//检测
+			for(var i=0;i<aBullet.length;i++){
+				if(aBullet[i].x<-50||aBullet[i].y<-50||aBullet[i].x>oC.width+50||aBullet[i].y>oC.height+50){
+					aBullet.splice(i,1);
+					i--;
+				}
+			}
+			for(var i=0;i<aFish.length;i++){
+				if(aFish[i].x<-50||aFish[i].y<-50||aFish[i].x>oC.width+50||aFish[i].y>oC.height+50){
+					aFish.splice(i,1);
+					i--;
+				}
+			}
+			
+			//碰撞检测
+			for(var i=0;i<aFish.length;i++){
+				for(var j=0;j<aBullet.length;j++){
+					if(aFish[i].collTest(aBullet[j])){
+						aFish.splice(i,1);
+						aBullet.splice(j,1);
+						i--;
+						j--;
+					}
+				}
+			}
+			
+			
+		},30);
+		
+		setInterval(function(){
+			for(var i=0;i<aFish.length;i++){
+				aFish[i].swimming();
+			}
+		},120);
+	});
+};
+</script>
+</head>
+
+<body>
+<canvas id="c1" width="800" height="600">
+	<strong>您的浏览器版本过低，请尽快升级.</strong>
+</canvas>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
