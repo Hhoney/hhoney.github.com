@@ -9,29 +9,14 @@ body{font-family:'隶书'; overflow:hidden; }
 .page1_box div:hover{box-shadow:inset 0 0 10px 3px yellow,0 0 20px 3px yellow; }
 .page1_box span{display:block; font-size:50px; text-align:center; line-height:100px; margin-top:50px; color:#4D64D2; }
 .page1_box em{display:block; font-size:20px; text-align:center; line-height:100px; font-style:normal; color:#4D64D2; }
-
-
-
-
-
 /*page2*/
-.page2{width:100%; height:100%; background:url(img/20151201101940_YdVJ3.jpeg) no-repeat; background-size:100%; }
-
-
-
-
-
-
-
-
-
-
-
-
-
+.page2{width:100%; height:100%; background:url(img/20151201101940_YdVJ3.jpeg) no-repeat; background-size:100%; overflow:hidden;}
+.page2_box{font-size:20px; line-height:25px; width:1000px; height:600px; margin:100px auto; background:#fff; border-radius:100px; box-shadow:inset 0px 0px 100px #000; padding:50px; }
+.page2_box h3{text-align:center; font-size:40px; width:200px; border:1px solid #000; border-radius:30px; background:rgba(0,0,255,0.5); margin:0 auto; line-height:80px; box-shadow:1px 4px 10px #000; color:#fff; text-shadow:1px 4px 10px #000; }
+.page2_box p{text-indent:2em; }
+.page2_box ul li{text-indent:2em; }
 /*page3*/
-
-.page3{width:100%; height:100%; background:url(img/bg.png) no-repeat; background-size:100%; border:1px solid #000; position:relative; }
+.page3{width:100%; height:100%; background:url(img/20120229112316_zJkc8.jpg) no-repeat; background-size:100%; overflow:hidden; position:relative; }
 .page3 ul{width:965px; height:660px; margin:100px auto 50px; overflow:hidden; border:1px solid #000; background:rgba(255,0,0,0.3); padding:10px; }
 .page3 ul li{width:300px; height:200px; background:red; margin:10px; float:left; transition:1s all ease; }
 .page3 ul li a{display:block; width:100%; height:100%; }
@@ -41,46 +26,47 @@ body{font-family:'隶书'; overflow:hidden; }
 .page3 p{width:965px; height:50px; background:-webkit-linear-gradient(45deg,red,blue); border-radius:50%; margin:0 auto; font-size:40px; line-height:50px; text-align:center; cursor:pointer; color:#fff; text-shadow:2px 2px 3px #000; box-shadow:inset 0 0 10px #000; -webkit-transition:0.5s all ease; position:absolute; top:0; left:0; }
 .page3 p:hover{box-shadow:inset 0 0 10px #fff,0 10px 5px #000; }
 .page3 p:active{top:3px; box-shadow:inset 0 0 10px 5px #fff,0 0 5px #000; }
-
-
-
-
-
-
-
 /*page4*/
-.page4{width:100%; height:100%; background:url(img/341093_201304161120171jWtS.jpg) no-repeat; background-size:100%; position:relative; border:1px solid #000; }
+.page4{width:100%; height:100%; background:url(img/341093_201304161120171jWtS.jpg) no-repeat; background-size:100%; position:relative; overflow:hidden; }
 .page4 ul{width:1200px; height:600px; margin:100px auto; overflow:hidden; }
 .page4 ul li{width:200px; height:600px; background:blue; margin:0 50px; float:left; position:relative; overflow:hidden; }
 .page4 ul li a{display:block; width:200px; height:600px; }
 .page4 ul li a img{width:200px; height:600px; }
 .page4 ul li span{width:100%; height:100px; background:rgba(0,0,255,0.3); position:absolute; left:0; bottom:-100px; transition:1s all ease; text-align:center; line-height:100px; font-size:30px; color:#fff; }
 .page4 ul li:hover span{transform:translate(0px,-100px); }
-
-
-
 .page4 div{width:965px; height:60px; margin:0 auto; position:relative; }
 .page4 p{width:965px; height:50px; background:-webkit-linear-gradient(45deg,red,blue); border-radius:50%; margin:0 auto; font-size:40px; line-height:50px; text-align:center; cursor:pointer; color:#fff; text-shadow:2px 2px 3px #000; box-shadow:inset 0 0 10px #000; -webkit-transition:0.5s all ease; position:absolute; top:0; left:0; }
 .page4 p:hover{box-shadow:inset 0 0 10px #fff,0 10px 5px #000; }
 .page4 p:active{top:3px; box-shadow:inset 0 0 10px 5px #fff,0 0 5px #000; }
-
-
-
-
-
-
 /*page5*/
-.page5{width:100%; height:100%; background:url(img/20141015141612.JPG) no-repeat; background-size:100%; }
+.page5{width:100%; height:100%; background:#000; background-size:100%; overflow:hidden; }
+.page5_box{width:602px; height:502px; margin:100px auto; position:relative; top:0; left:0; perspective:900px; }
+.page5_box li{width:100%; height:100%; position:absolute; top:0; left:0; opacity:0; -webkit-transition:1s all ease; -moz-transition:1s all ease; -ms-transition:1s all ease; transition:1s all ease; }
+.page5_box li img{width:602px; height:602px; }
+.page5_box .l2{-webkit-transform:translate(-350px,0) rotateY(45deg); -moz-transform:translate(-350px,0) rotateY(45deg); -ms-transform:translate(-350px,0) rotateY(45deg); transform:translate(-350px,0) rotateY(45deg); opacity:0; z-index:1; }
+.page5_box .l1{-webkit-transform:translate(-300px,0) rotateY(45deg); -moz-transform:translate(-300px,0) rotateY(45deg); -ms-transform:translate(-300px,0) rotateY(45deg); transform:translate(-300px,0) rotateY(45deg); opacity:0.5; z-index:2; }
+.page5_box .cur{opacity:1; z-index:3; }
+.page5_box .r1{-webkit-transform:translate(300px,0) rotateY(-45deg); -moz-transform:translate(300px,0) rotateY(-45deg); -ms-transform:translate(300px,0) rotateY(-45deg); transform:translate(300px,0) rotateY(-45deg); opacity:0.5; z-index:2; }
+.page5_box .r2{-webkit-transform:translate(350px,0) rotateY(-45deg); -moz-transform:translate(350px,0) rotateY(-45deg); -ms-transform:translate(350px,0) rotateY(-45deg); transform:translate(350px,0) rotateY(-45deg); opacity:0; z-index:1; }
+.page5 div{width:1800px; height:300px; margin:0 auto; position:relative; }
+.page5 div a{width:400px; height:100px; background:rgba(0,0,0,0.5); line-height:100px; text-align:center; font-size:40px; font-weight:bold; border-radius:50px; box-shadow:inset 0px 0px 50px 5px #fff,0px 5px 10px 5px #fff; -webkit-transition:.3s all ease; }
+.page5 div .prev{position:absolute; left:400px; top:100px; }
+.page5 div .next{position:absolute; left:1000px; top:100px; }
+.page5 div a:hover{box-shadow:inset 0px 0px 100px 5px #fff,0px 5px 10px 5px #fff; }
+.page5 div a:active{top:110px; box-shadow:inset 0px 0px 50px 5px #fff,0px 0px 10px 3px #fff; }
+
+
+
 
 
 
 
 /*page6*/
-.page6{width:100%; height:100%; background:url(img/bg1.png) no-repeat; background-size:cover; }
+.page6{width:100%; height:100%; background:url(img/4930063_114003939710_2.jpg) no-repeat; background-size:cover; }
 
 
 /*page7*/
-.page7{width:100%; height:100%; background:url(img/20120229112316_zJkc8.jpg) no-repeat; background-size:100%; }
+.page7{width:100%; height:100%; background:url(img/5039dd15700e8.jpg) no-repeat; background-size:100%; }
 
 
 

@@ -8,8 +8,9 @@ window.onload=function(){
 	var aPage1_box=oPage1_box.children;
 	var oPage2=document.getElementById('page2');
 	var oPage3=document.getElementById('page3');
-	
-	
+	var oPrev=document.querySelector('.prev');
+	var oNext=document.querySelector('.next');
+	var aLi=document.querySelectorAll('.page5_box li');
 	
 	
 	var oTop=document.getElementById('top');
@@ -116,7 +117,6 @@ window.onload=function(){
 	}
 	
 	//关于我的
-	oPage2
 	
 	//效果展示
 	
@@ -186,8 +186,193 @@ window.onload=function(){
 				}; 
 			};
 		}*/
-		
+	//page5
+	var arr=[];
+	for(var i=0;i<aLi.length;i++){
+		arr[i]=aLi[i].className;
+	}
+	var bOk=false;
+	oPrev.onclick=function(){
+		if(bOk)return;
+		bOk=true;
+		arr.push(arr.shift());
+		for(var i=0;i<arr.length;i++){
+			aLi[i].className=arr[i];
+		}
+	};	
+	oNext.onclick=function(){
+		if(bOk)return;
+		bOk=true;
+		arr.unshift(arr.pop());
+		for(var i=0;i<arr.length;i++){
+			aLi[i].className=arr[i];
+		}
+	};
+	for(var i=0;i<aLi.length;i++){
+		aLi[i].addEventListener('transitionend',function(){
+			bOk=false;
+		},false);
+	}	
 	
+	
+	//page6
+	function time2date(time)
+	{
+		var oDate=new Date();
+		
+		oDate.setTime(time*1000);
+		
+		return oDate.getFullYear()+'-'+(oDate.getMonth()+1)+'-'+oDate.getDate()+' '+oDate.getHours()+':'+oDate.getMinutes()+':'+oDate.getSeconds();
+	}
+	
+	var oBtnSubmit=document.getElementById('btn1');
+	var oTxtContent=document.getElementById('tijiaoText');
+	var oDivList=document.getElementById('div_list');
+	var oDivPage=document.getElementById('div_page');
+	
+	function createReply(id, content, time, acc, ref)
+	{
+		var oNewDiv=document.createElement('div');
+		
+		oNewDiv.className='reply';
+		oNewDiv.innerHTML=
+			'<p class="replyContent">'+content+'</p>\
+			<p class="operation">\
+				<span class="replyTime">'+time2date(time)+'</span>\
+				<span class="handle">\
+					<a href="javascript:;" class="top">'+acc+'</a>\
+					<a href="javascript:;" class="down_icon">'+ref+'</a>\
+					<a href="javascript:;" class="cut">删除</a>\
+				</span>\
+			</p>';
+		
+		oNewDiv.getElementsByClassName('top')[0]._my_id=id;
+		oNewDiv.getElementsByClassName('down_icon')[0]._my_id=id;
+		
+		return oNewDiv;
+	}
+	
+	//1.发布
+	//接口：weibo.php?act=add&content=xxx
+	oBtnSubmit.onclick=function ()
+	{
+		ajax({
+			url:	'weibo.php',
+			data:	{act: 'add', content: oTxtContent.value},
+			success:function (str){
+				var json=eval('('+str+')');
+				
+				if(json.error==0)
+				{
+					//插入东西
+					var oNewDiv=createReply(json.id, oTxtContent.value, json.time, 0, 0);
+					
+					oTxtContent.value='';
+					
+					if(oDivList.children.length==0)
+					{
+						oDivList.appendChild(oNewDiv);
+					}
+					else
+					{
+						oDivList.insertBefore(oNewDiv, oDivList.children[0]);
+					}
+				}
+				else
+				{
+					alert('发布失败');
+				}
+			},
+			error:	function (){
+				alert('发布失败，请刷新页面重试');
+			}
+		});
+	};
+	
+	//2.获取数据
+	//接口：weibo.php?act=get&page=1
+	getPage(1);
+	
+	function getPage(n)
+	{
+		ajax({
+			url:	'weibo.php',
+			data:	{act: 'get', page: n},
+			success:function (str){
+				var arr=eval('('+str+')');
+				
+				oDivList.innerHTML='';
+				for(var i=0;i<arr.length;i++)
+				{
+					var oNewDiv=createReply(arr[i].id, arr[i].content, arr[i].time, arr[i].acc, arr[i].ref);
+					oDivList.appendChild(oNewDiv);
+				}
+			}
+		});
+	}
+	
+	//3.分页
+	//接口：weibo.php?act=get_page_count
+	ajax({
+		url:	'weibo.php',
+		data:	{act: 'get_page_count'},
+		success:function (str){
+			var json=eval('('+str+')');
+			
+			for(var i=0;i<json.count;i++)
+			{
+				var oA=document.createElement('a');
+				
+				oA.href='javascript:;';
+				oA.innerHTML=i+1;
+				
+				oDivPage.appendChild(oA);
+				
+				oA.onclick=function ()
+				{
+					for(var i=0;i<oDivPage.children.length;i++)
+					{
+						oDivPage.children[i].className='';
+					}
+					this.className='active';
+					
+					getPage(this.innerHTML);
+				};
+			}
+			
+			oDivPage.children[0].className='active';
+		}
+	});
+	
+	//加赞、踩
+	oDivList.onclick=function (ev)
+	{
+		var oEvent=ev||event;
+		var oSrc=oEvent.srcElement||oEvent.target;
+		
+		if(oSrc.className=='top')				//顶
+		{
+			//接口：weibo.php?act=acc&id=12
+			ajax({
+				url:	'weibo.php',
+				data:	{act: 'acc', id: oSrc._my_id},
+				success:function (){
+					oSrc.innerHTML++;
+				}
+			});
+		}
+		else if(oSrc.className=='down_icon')	//踩
+		{
+			//接口：weibo.php?act=ref&id=12
+			ajax({
+				url:	'weibo.php',
+				data:	{act: 'ref', id: oSrc._my_id},
+				success:function (){
+					oSrc.innerHTML++;
+				}
+			});
+		}
+	};
 	
 	
 	
