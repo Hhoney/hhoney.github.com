@@ -49,10 +49,10 @@ body{font-family:'隶书'; overflow:hidden; }
 .page5_box .r1{-webkit-transform:translate(300px,0) rotateY(-45deg); -moz-transform:translate(300px,0) rotateY(-45deg); -ms-transform:translate(300px,0) rotateY(-45deg); transform:translate(300px,0) rotateY(-45deg); opacity:0.5; z-index:2; }
 .page5_box .r2{-webkit-transform:translate(350px,0) rotateY(-45deg); -moz-transform:translate(350px,0) rotateY(-45deg); -ms-transform:translate(350px,0) rotateY(-45deg); transform:translate(350px,0) rotateY(-45deg); opacity:0; z-index:1; }
 .page5 div{width:1800px; height:300px; margin:0 auto; position:relative; }
-.page5 div a{width:400px; height:100px; background:rgba(0,0,0,0.5); line-height:100px; text-align:center; font-size:40px; font-weight:bold; border-radius:50px; box-shadow:inset 0px 0px 50px 5px #fff,0px 5px 10px 5px #fff; -webkit-transition:.3s all ease; }
+.page5 div a{width:400px; height:100px; background:rgba(0,0,0,0.5); line-height:100px; text-align:center; font-size:40px; font-weight:bold; border-radius:50px; box-shadow:inset 0px 0px 50px 5px #fff,0px 5px 10px 5px #fff; -webkit-transition:.2s all ease; text-decoration:none; }
 .page5 div .prev{position:absolute; left:400px; top:100px; }
 .page5 div .next{position:absolute; left:1000px; top:100px; }
-.page5 div a:hover{box-shadow:inset 0px 0px 100px 5px #fff,0px 5px 10px 5px #fff; }
+.page5 div a:hover{box-shadow:inset 0px 0px 80px 5px #fff,0px 5px 10px 5px #fff; }
 .page5 div a:active{top:110px; box-shadow:inset 0px 0px 50px 5px #fff,0px 0px 10px 3px #fff; }
 
 
