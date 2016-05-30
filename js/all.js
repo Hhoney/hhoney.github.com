@@ -1,5 +1,7 @@
 window.onload=function(){
 	var oBox=document.getElementById('box');
+	var oCon=document.getElementById('con');
+	var oLoad=document.getElementById('loading');
 	var aPage=oBox.children;
 	var oHome=document.getElementById('home');
 	var aBox=oBox.getElementsByTagName('div');
@@ -11,7 +13,8 @@ window.onload=function(){
 	var oPrev=document.querySelector('.prev');
 	var oNext=document.querySelector('.next');
 	var aLi=document.querySelectorAll('.page5_box li');
-	
+	oCon.style.display='block';
+	oLoad.style.display='none';
 	
 	var oTop=document.getElementById('top');
 	var iNow=0;
