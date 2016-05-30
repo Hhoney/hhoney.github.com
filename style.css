@@ -1,7 +1,7 @@
 @charset "utf-8";
 /*page1*/
 body{font-family:'隶书'; overflow:hidden; }
-.box{width:1000px; height:100%; position:absolute; left:0; top:0; }
+.box{width:100%; height:100%; position:absolute; left:0; top:0; }
 .page1{width:100%; height:100%; background:url(img/start.gif); position:relative; left:0; top:0; overflow:hidden; }
 .page1_box{width:200px; height:300px; position:absolute; left:50%; top:50%; margin-left:-100px; margin-top:-150px; -webkit-transform-style:preserve-3d; -moz-transform-style:preserve-3d; -ms-transform-style:preserve-3d; transform-style:preserve-3d; -webkit-transform:perspective(800px) rotateX(0deg) rotateY(0deg); -moz-transform:perspective(800px) rotateX(0deg) rotateY(0deg); -ms-transform:perspective(800px) rotateX(0deg) rotateY(0deg); transform:perspective(800px) rotateX(0deg) rotateY(0deg); cursor:pointer; }
 .page1_box div{position:absolute; top:0; left:0; width:100%; height:100%; border:1px solid #fff; box-shadow:0 0 10px 3px blue,0 0 10px 8px yellow; border-radius:15px; background:rgba(255,255,255,0.3); -webkit-tansform:rotateY(0deg) translateZ(0px); -moz-tansform:rotateY(0deg) translateZ(0px); -ms-tansform:rotateY(0deg) translateZ(0px); tansform:rotateY(0deg) translateZ(0px); }
