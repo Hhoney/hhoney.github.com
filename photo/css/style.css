@@ -1,3 +1,19 @@
+/* @media  screen and (max-width:1500px){
+    .boutiqueBox {
+        height: 400px;
+    }
+    .onlyBox {
+        height: 400px;
+    }
+}
+@media  screen and (min-width:1500px){
+    .boutiqueBox {
+        height: 500px;
+    }
+    .onlyBox {
+        height: 500px;
+    }
+} */
 @font-face { 
   font-family: 'SketchRockwell'; 
   src: url('../fonts/couri.ttf');
@@ -30,6 +46,7 @@ img {
 .box {
     width: 80%;
     min-width: 900px;
+    max-width: 1300px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -269,12 +286,16 @@ img {
     background-size:100%;
 }
 .footerCon {
-    width: 40%;
-    height: 150px;
+    width: 30%;
+    height: 70px;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     color: #ccc;
     position: absolute;
     left: 170px;
     bottom: 65px;
+    padding: 40px;
+}
+.footerCon p {
+    line-height: 30px;
 }
