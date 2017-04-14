@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{margin:0; padding:0;}
+html,body{height:100%; overflow:hidden;}
+#c1{background:rgba(0,0,255,0.2);}
+</style>
+<script>
+function rnd(n,m){
+	return Math.floor(n+Math.random()*(m-n));
+}
+window.onload=function(){
+	var oC = document.getElementById('c1');
+	oC.width = document.documentElement.clientWidth;
+	oC.height = document.documentElement.clientHeight;
+	var gd = oC.getContext('2d');
+	var N = 5;
+	var aPoint = [];
+	for(var i=0;i<N;i++){
+		aPoint.push({
+			x:rnd(0,oC.width),
+			y:rnd(0,oC.height),
+			speedX:rnd(-10,10),
+			speedY:rnd(-10,10)
+		});
+	}
+	var LEN = 10;
+	var oldPoint = [];
+	setInterval(function(){
+		gd.clearRect(0,0,oC.width,oC.height);
+		for(var i=0;i<aPoint.length;i++){
+			if(aPoint[i].x<0){
+				aPoint[i].x = 0;
+				aPoint[i].speedX*=-1;
+			}
+			
+			if(aPoint[i].y<0){
+				aPoint[i].y=0;
+				aPoint[i].speedY*=-1;
+			}
+			
+			if(aPoint[i].x>oC.width){
+				aPoint[i].x = oC.width;
+				aPoint[i].speedX*=-1;
+			}
+			
+			if(aPoint[i].y>oC.height){
+				aPoint[i].y = oC.height;
+				aPoint[i].speedY*=-1;
+			}
+			
+			
+			aPoint[i].x+=aPoint[i].speedX;
+			aPoint[i].y+=aPoint[i].speedY;
+		}
+		for(var i=0;i<aPoint.length;i++){
+			drawPoint(aPoint[i]);
+		}
+		gd.beginPath();
+		gd.strokeStyle = '#fff';
+		gd.moveTo(aPoint[0].x,aPoint[0].y);
+		for(var i=1;i<aPoint.length;i++){
+			gd.lineTo(aPoint[i].x,aPoint[i].y);
+		}
+		gd.closePath();
+		gd.stroke();
+		
+		
+		var arr = [];
+		for(var i = 0;i<aPoint.length;i++){
+			arr.push({
+				x:aPoint[i].x,
+				y:aPoint[i].y,
+				speedX:aPoint[i].speedX,
+				speedY:aPoint[i].speedY
+			});
+		}
+		
+		oldPoint.push(arr);
+		if(oldPoint.length>LEN){
+			oldPoint.shift();
+		}
+		
+		
+		for(var i=0;i<oldPoint.length;i++){
+			gd.beginPath();
+			gd.moveTo(oldPoint[i][0].x,oldPoint[i][0].y);
+			for(var j=1;j<oldPoint[i].length;j++){
+				gd.lineTo(oldPoint[i][j].x,oldPoint[i][j].y);
+			}
+			gd.closePath();
+			gd.stroke();
+		}
+	},16);
+	
+	
+	
+	function drawPoint(oPoint){
+		gd.beginPath();
+		gd.fillStyle = '#fff';
+		gd.fillRect(oPoint.x,oPoint.y,0,0);
+	}
+};
+</script>
+</head>
+
+<body>
+<canvas id="c1"></canvas>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

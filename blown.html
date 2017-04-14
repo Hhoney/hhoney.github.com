@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	*{margin:0; padding:0; }
+	body{background:rgba(0,0,255,0.3);}
+	#div1,#div2{ float:left; margin:10px;}
+	#div1{width:310px;height:310px; position:relative; margin-left:600px; margin-top:300px; }
+	.mask{width:100px;height:100px; background:yellow; opacity:.6; filter:aplpha(opacity:60); position:absolute;left:0;top:0; display:none;}
+	#div2{width:310px;height:310px; overflow:hidden; position:relative; display:none; margin-top:300px; }
+	#div2 img{ position:absolute; left:0; top:0;}
+</style>
+<script>
+	window.onload = function(){
+		var oDiv1 = document.getElementById('div1');
+		var oMask = oDiv1.children[1];	
+		var oDiv2 = document.getElementById('div2');
+		var oImg = oDiv2.children[0];
+		oDiv1.onmouseover = function(){
+			oMask.style.display = 'block';	
+			oDiv2.style.display = 'block';
+		};	
+		oDiv1.onmouseout = function(){
+			oMask.style.display = 'none';	
+			oDiv2.style.display = 'none';
+		};
+		
+		oDiv1.onmousemove = function(ev){
+			var oEvent = ev||event;
+			var l = oEvent.clientX - oDiv1.offsetLeft - oMask.offsetWidth/2;
+			var t = oEvent.clientY - oDiv1.offsetTop - oMask.offsetHeight/2;
+			
+			if(l<0){
+				l = 0;
+			}else if(l>oDiv1.offsetWidth - oMask.offsetWidth){
+				l = oDiv1.offsetWidth - oMask.offsetWidth;
+			}
+			
+			if(t<0){
+				t = 0;
+			}else if(t>oDiv1.offsetHeight - oMask.offsetHeight){
+				t = oDiv1.offsetHeight - oMask.offsetHeight;
+			}
+			
+			oMask.style.left = l +'px';
+			oMask.style.top = t +'px';
+			
+			oImg.style.left = - l*(oImg.offsetWidth -oDiv2.offsetWidth)/(oDiv1.offsetWidth - oMask.offsetWidth)+'px';
+			oImg.style.top = - t*(oImg.offsetHeight -oDiv2.offsetHeight)/(oDiv1.offsetHeight - oMask.offsetHeight)+'px';
+			
+		};	
+	};
+</script>
+</head>
+<body>
+	<div id="div1">
+    	<img src="img/m1.jpg">
+        <div class="mask"></div>
+    </div>
+    <div id="div2">
+    	<img src="img/b1.jpg">
+    </div>
+</body>
+</html>

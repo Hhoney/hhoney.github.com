@@ -1,0 +1,465 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/base.css" />
+<style>
+body{font-size:12px; color:#6d6d6d; }
+a{font-size:12px; color:#6d6d6d; }
+.nav{min-width:930px; height:24px; border-bottom:1px solid #dfdfdf; background:#fafafa; padding-top:12px; }
+.nav-t{width:930px; height:12px; margin:0 auto; }
+.nav-t a{font-size:11px; line-height:12px; border-right:1px solid #dfdfdf; color:#8c8c8c; padding-left:12px; padding-right:16px; }
+.nav-t .none{padding-left:0; }
+.nav-t .none1{border-right:none; }
+.nav-t .none2{padding-right:0; border-right:none; }
+.top{width:930px; height:95px; margin:0 auto; }
+.logo a{display:block; width:70px; height:70px; background:url(img/logo.png); margin-top:25px; text-indent:-999em; }
+.top-r{width:560px; height:95px; }
+.time{margin-top:23px; }
+.time i{width:15px; height:16px; background:url(img/time.png); font-size:11px; color:#8c8c8c; }
+.top-b{width:560px; height:40px; margin-top:16px; }
+.inp{width:383px; height:38px; position:relative; }
+.inp input{width:368px; height:38px; border:1px solid #dfdfdf; padding-left:15px; border-right:none; }
+.inp p{width:186px; height:20px; position:absolute; top:9px; right:4px; }
+.inp a{font-size:11px; color:#333; line-height:20px; width:56px; text-align:center; background:#f3f3f3; margin-right:5px; }
+.top-b .sou{width:38px; height:38px; border:1px solid #dfdfdf; background:url(img/sou.png) no-repeat 12px 12px; ; }
+.car{position:relative; }
+.car input{width:126px; height:40px; background:#ffdb3d; margin-left:10px; font-size:12px; color:#333; padding-left:10px; cursor:pointer; }
+.car i{width:14px; height:14px; background:url(img/car.png); position:absolute; top:13px; left:44px; }
+/*head*/
+.head{width:930px; height:642px; margin:15px auto 0; }
+.head-l{width:248px; }
+.head-l h2 a{display:block; line-height:50px; font-size:18px; color:#fff; background:#ff4a00; padding-left:20px; font-weight:normal; }
+.list{width:226px; height:54px; border:1px solid #dfdfdf; border-top:none; padding-left:20px; padding-top:19px; }
+.list span{color:#ff4a00; }
+.list p{margin-top:10px; }
+.list a{margin-right:7px; }
+.head-r{width:682px; }
+.subnav{background:#404144; width:682px; }
+.subnav a{line-height:50px; font-size:15px; color:#fff; padding:0 12px; }
+.subnav a:hover{background:#2f3031; }
+.pic{width:682px; height:420px; position:relative; }
+.pic img{width:682px; height:420px; }
+.pic span{width:160px; height:20px; position:absolute; left:517px; bottom:15px; }
+.pic a{width:28px; background:#a12010; border:1px solid #bc5f54; color:#f3e3e1; line-height:18px; text-align:center; margin-right:10px; }
+.pic a:hover{background:#5c1208; border-color:#8a564f; }
+.pic-b a{display:block; }
+.pic-b img{width:226px; height:170px; border:1px solid #dfdfdf; border-left:none; }
+.hot{width:930px; margin:0 auto; }
+.hot-top{width:929px; height:60px; padding-right:1px; }
+.hot-top h3{font-size:17px; color:#333; margin-top:25px; }
+.hot-top span{margin-left:11px; margin-top:29px; }
+.hot-top a{width:28px; height:18px; border:1px solid #dfdfdf; color:#c3c3c8; text-align:center; line-height:18px; margin-top:30px; }
+.hot-top .none{border-right:none; }
+.hot-top a:hover{background:#e9e4e4; color:#a8a3a3; }
+.hot-b{width:928px; border:1px solid #dfdfdf; }
+.hot-pic{width:309px; height:308px; text-align:center; }
+.hot-pic p{font-size:16px; color:#000; }
+.hot-pic span{display:block; color:#8c8c8c; }
+.hot-bor{width:308px; border-left:1px solid #dfdfdf; border-right:1px solid #dfdfdf; }
+.new{width:930px; margin:5px auto 0; }
+.hot-top .more{border:none; color:#333; margin-right:3px; width:39px; }
+.hot-top .more:hover{color:#F69; background:none; }
+.news{width:930px; }
+.new-l{width:620px; }
+.img{width:619px; height:309px; border:1px solid #dfdfdf; border-right:none; }
+.list-img{padding-left:30px; padding-top:34px; width:279px; height:275px; border-left:1px solid #dfdfdf; border-bottom:1px solid #dfdfdf; position:relative; }
+.list-img a{color:#000; }
+.list-img img{margin-top:4px; }
+.list-img .money{color:#000; margin-top:8px; }
+.list-img i{width:70px; height:20px; background:#f32f39; text-align:center; line-height:20px; color:#fff; position:absolute; left:213px; top:0; font-style:normal; }
+.money span{color:#8c8c8c; text-decoration:line-through; }
+.two{width:310px; height:310px; }
+.small{width:279px; height:154px; border-left:1px solid #dfdfdf; border-bottom:1px solid #dfdfdf; padding-left:30px; }
+.small a{display:block; margin-top:30px; font-size:12px; color:#000; }
+.small span{font-size:12px; color:#000; line-height:26px; }
+.small .margin{margin-top:9px; margin-right:10px; }
+.new-r{width:308px; background:#fafafa; border:1px solid #dfdfdf; }
+.hongmi{width:278px; height:126px; border-bottom:1px solid #dfdfdf; padding-left:30px; position:relative; }
+.moon h4{font-size:17px; color:#333; margin-top:34px; }
+.moon a{color:#f32f39; } 
+.moon a span{color:#8c8c8c; text-decoration:line-through; font-size:13px; line-height:26px; }
+.moon .no{text-decoration:none; }
+.moon p{font-size:11px; }
+.hongmi img{width:100px; height:100px; margin-top:13px; margin-right:18px; }
+.hongmi i{width:70px; height:20px; background:#f32f39; text-align:center; line-height:20px; color:#fff; font-size:11px; position:absolute; top:0; left:30px; font-style:normal; }
+.input{height:264px; border-bottom:1px solid #dfdfdf; padding-top:15px; padding-left:30px; }
+.input h4{font-size:17px; color:#333; line-height:47px; }
+.input input{width:231px; height:38px; border:1px solid #dfdfdf; padding-left:15px; margin-bottom:10px; background:#fff; }
+.input select{width:248px; height:40px; border:1px solid #dfdfdf; margin-bottom:3px; padding-left:15px;}
+.input p{font-size:12px; line-height:54px; }
+.input strong{font-size:16px; }
+.input .money{width:248px; height:40px; padding-left:0; background:#dcdee4; color:#fff; }
+.bnew{height:248px; padding-left:30px; padding-top:20px; }
+.bnew h4{font-size:17px; color:#333; line-height:37px; }
+.bnew i{width:2px; height:2px; background:#333; margin:21px 9px 0 6px; }
+.bnew a{display:block; width:248px; line-height:45px; border-bottom:1px solid #dfdfdf; color:#333; }
+.bnew .last{border-bottom:none; }
+.love{width:930px; margin:0 auto; }
+.love h3{width:930px; font-size:17px; color:#333; margin-top:14px; line-height:51px; }
+.love-r{width:308px; border:1px solid #dfdfdf; }
+.love-r h2{font-size:24px; color:#000; line-height:100px; margin-bottom:3px; margin-left:31px; }
+.love-r h2 span{color:#ff4a4f; }
+.love-list{height:102px; border-top:1px solid #dfdfdf; padding-left:31px; }
+.love-list strong{font-size:40px; margin-top:26px; color:#ff4a00;}
+.sell a{}
+</style>
+</head>
+
+<body>
+	<div class="nav">
+    	<div class="clear nav-t">
+        	<a href="#" class="fl none">小米网</a>
+        	<a href="#" class="fl">MIUI</a>
+        	<a href="#" class="fl">米聊</a>
+        	<a href="#" class="fl">游戏</a>
+        	<a href="#" class="fl">多看阅读</a>
+        	<a href="#" class="fl">云服务</a>
+        	<a href="#" class="fl">小米网移动版</a>
+        	<a href="#" class="fl none1">Select region</a>
+        	<a href="#" class="fr none2">注册</a>
+        	<a href="#" class="fr">登录</a>
+        </div>
+    </div>
+    <div class="top clear">
+    	<h1 class="fl logo"><a href="#">小米</a></h1>
+        <div class="fr top-r">
+        	<p class="clear time">
+                <a href="#" class="fr">11月18日预约开放购买</a>
+                <i class="fr"></i>
+            </p>
+            <div class="top-b clear">
+            	<div class="inp fl">
+            		<input type="text" placeholder="搜索您需要的商品" />
+                    <p class="clear">
+                    	<a href="#" class="fl">小米手机4</a>
+                    	<a href="#" class="fl">小米电视</a>
+                    	<a href="#" class="fl">红米Note</a>
+                    </p>
+                </div>
+                <a href="#" class="sou fl"></a>
+                <a href="#" class="fl car">
+                	<input type="button" value="购物车" />
+                    <i></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="head clear">
+    	<div class="fl head-l">
+        	<h2><a href="#">全部商品分类</a></h2>
+            <ul>
+            	<li class="list">
+                	<span>购买手机</span>
+                    <p class="clear">
+                    	<a href="#" class="fl">小米4</a>
+                    	<a href="#" class="fl">小米3</a>
+                    	<a href="#" class="fl">红米</a>
+                    	<a href="#" class="fl">红米Note</a>
+                    </p>
+                </li>
+            	<li class="list">
+                	<span>购买手机</span>
+                    <p class="clear">
+                    	<a href="#" class="fl">小米4</a>
+                    	<a href="#" class="fl">小米3</a>
+                    	<a href="#" class="fl">红米</a>
+                    	<a href="#" class="fl">红米Note</a>
+                    </p>
+                </li>
+            	<li class="list">
+                	<span>购买手机</span>
+                    <p class="clear">
+                    	<a href="#" class="fl">小米4</a>
+                    	<a href="#" class="fl">小米3</a>
+                    	<a href="#" class="fl">红米</a>
+                    	<a href="#" class="fl">红米Note</a>
+                    </p>
+                </li>
+            	<li class="list">
+                	<span>购买手机</span>
+                    <p class="clear">
+                    	<a href="#" class="fl">小米4</a>
+                    	<a href="#" class="fl">小米3</a>
+                    	<a href="#" class="fl">红米</a>
+                    	<a href="#" class="fl">红米Note</a>
+                    </p>
+                </li>
+            	<li class="list">
+                	<span>购买手机</span>
+                    <p class="clear">
+                    	<a href="#" class="fl">小米4</a>
+                    	<a href="#" class="fl">小米3</a>
+                    	<a href="#" class="fl">红米</a>
+                    	<a href="#" class="fl">红米Note</a>
+                    </p>
+                </li>
+            	<li class="list">
+                	<span>购买手机</span>
+                    <p class="clear">
+                    	<a href="#" class="fl">小米4</a>
+                    	<a href="#" class="fl">小米3</a>
+                    	<a href="#" class="fl">红米</a>
+                    	<a href="#" class="fl">红米Note</a>
+                    </p>
+                </li>
+            	<li class="list">
+                	<span>购买手机</span>
+                    <p class="clear">
+                    	<a href="#" class="fl">小米4</a>
+                    	<a href="#" class="fl">小米3</a>
+                    	<a href="#" class="fl">红米</a>
+                    	<a href="#" class="fl">红米Note</a>
+                    </p>
+                </li>
+            	<li class="list">
+                	<span>购买手机</span>
+                    <p class="clear">
+                    	<a href="#" class="fl">小米4</a>
+                    	<a href="#" class="fl">小米3</a>
+                    	<a href="#" class="fl">红米</a>
+                    	<a href="#" class="fl">红米Note</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    	<div class="fl head-r">
+        	<div class="clear subnav">
+            	<a href="#" class="fl">首页</a>
+            	<a href="#" class="fl">小米手机</a>
+            	<a href="#" class="fl">红米</a>
+            	<a href="#" class="fl">小米平板</a>
+            	<a href="#" class="fl">小米电视</a>
+            	<a href="#" class="fl">盒子</a>
+            	<a href="#" class="fl">路由器</a>
+            	<a href="#" class="fl">合约机</a>
+            	<a href="#" class="fl">服务</a>
+            	<a href="#" class="fl">社区</a>
+            </div>
+            <div class="pic">
+            	<img src="img/cat.jpg" />
+                <span class="clear">
+                	<a href="#" class="fl">1</a>
+                	<a href="#" class="fl">2</a>
+                	<a href="#" class="fl">3</a>
+                	<a href="#" class="fl">4</a>
+                </span>
+            </div>
+            <div class="pic-b clear">
+            	<a href="#" class="fl">
+                	<img src="img/img3.jpg" />
+                </a>
+            	<a href="#" class="fl">
+                	<img src="img/img2.jpg" />
+                </a>
+            	<a href="#" class="fl">
+                	<img src="img/img.jpg" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="hot">
+    	<div class="hot-top">
+        	<h3 class="fl">小米明星单品</h3>
+            <span class="fl">根据机型选配件</span>
+            <a href="#" class="fr">&gt;</a>
+            <a href="#" class="fr none">&lt;</a>
+        </div>
+        <div class="hot-b clear">
+            <a href="#" class="fl hot-pic">
+                <img src="img/img5.jpg" />
+                <p>10400mAh小米移动电源</p>
+                <span>泉铝合金金属外壳，LG/三星等优质电芯</span>
+            </a>
+            <a href="#" class="fl hot-pic hot-bor">
+                <img src="img/img5.jpg" />
+                <p>10400mAh小米移动电源</p>
+                <span>泉铝合金金属外壳，LG/三星等优质电芯</span>
+            </a>
+            <a href="#" class="fl hot-pic">
+                <img src="img/img5.jpg" />
+                <p>10400mAh小米移动电源</p>
+                <span>泉铝合金金属外壳，LG/三星等优质电芯</span>
+            </a>
+        </div>
+    </div>
+    <div class="new">
+    	<div class="hot-top clear">
+        	<h3 class="fl">新品上架</h3>
+            <a href="#" class="fr more">更多&gt;</a>
+        </div>
+        <div class="news clear">
+        	<div class="fl new-l">
+            	<a href="#">
+                	<img src="img/w.jpg" class="img"/>
+                </a>
+                <ul class="clear">
+                	<li class="list-img fl">
+                    	<a href="#">大人物米兔圆领套头卫衣</a>
+                        <p class="money">99元<span>129元</span></p>
+                        <a href="#">
+                        	<img src="img/r.jpg" />
+                        </a>
+                        <i>包邮</i>
+                    </li>
+                	<li class="fl two">
+                    	<div class="clear small">
+                        	<p class="fl">
+                            	<a href="#">QCY运动蓝牙耳机</a>
+                                <span>129元</span>
+                            </p>
+                            <a href="#" class="fr margin">
+                            	<img src="img/t.jpg" />
+                            </a>
+                        </div>
+                        <div class="clear small">
+                        	<p class="fl">
+                            	<a href="#">QCY运动蓝牙耳机</a>
+                                <span>129元</span>
+                            </p>
+                            <a href="#" class="fr margin">
+                            	<img src="img/t.jpg" />
+                            </a>
+                        </div>
+                    </li>
+                	<li class="list-img fl">
+                    	<a href="#">大人物米兔圆领套头卫衣</a>
+                        <p class="money">99元</p>
+                        <a href="#">
+                        	<img src="img/r.jpg" />
+                        </a>
+                    </li>
+                	<li class="list-img fl">
+                    	<a href="#">大人物米兔圆领套头卫衣</a>
+                        <p class="money">99元</p>
+                        <a href="#">
+                        	<img src="img/r.jpg" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        	<div class="fl new-r">
+            	<ul>
+                	<li class="hongmi clear">
+                    	<div class="fl moon">
+                        	<h4>红米3D月球系列...</h4>
+                            <a href="#">29元<span>39元</span></a>
+                            <p>上午十点开始秒杀</p>
+                        </div>
+                        <a href="#" class="fr">
+                        	<img src="img/f.jpg" />
+                        </a>
+                        <i>特价秒杀</i>
+                    </li>
+                    <li class="hongmi clear">
+                    	<div class="fl moon">
+                        	<h4>特惠配件套装</h4>
+                            <a href="#"><span class="no">手机必备配件组合购买</span></a>
+                            <p>实惠更优惠</p>
+                        </div>
+                        <a href="#" class="fr">
+                        	<img src="img/s.jpg" />
+                        </a>
+                    </li>
+                    <li class="hongmi clear">
+                    	<div class="fl moon">
+                        	<h4>特惠配件套装</h4>
+                            <a href="#"><span class="no">手机必备配件组合购买</span></a>
+                            <p>实惠更优惠</p>
+                        </div>
+                        <a href="#" class="fr">
+                        	<img src="img/d.jpg" />
+                        </a>
+                    </li>
+                </ul>
+                <div class="input">
+                	<h4>话费充值</h4>
+                    <input type="text" placeholder="请输入手机号码">
+                    <select>
+                    	<option>100元</option>
+                    	<option>50元</option>
+                    	<option>20元</option>
+                    </select>
+                    <p>实付价格：<strong>98.4</strong>元起</p>
+                    <input type="button" value="立即充值" class="money" />
+                </div>
+                <div class="bnew">
+                	<h4>新闻公告</h4>
+                    <ul>
+                    	<li>
+                        	<a href="#" class="clear">
+                                <i class="fl"></i>
+                                <p class="fl">企业用户采购通道</p>
+                                <span class="fr">&gt;</span>
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#" class="clear">
+                                <i class="fl"></i>
+                                <p class="fl">企业用户采购通道</p>
+                                <span class="fr">&gt;</span>
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#" class="clear">
+                                <i class="fl"></i>
+                                <p class="fl">企业用户采购通道</p>
+                                <span class="fr">&gt;</span>
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#" class="clear last">
+                                <i class="fl"></i>
+                                <p class="fl">企业用户采购通道</p>
+                                <span class="fr">&gt;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="love new">
+        <h3 class="fl">大家都喜欢</h3>
+        <div class="news clear">
+        	<div class="fl new-l">
+            	<a href="#">
+                	<img src="img/im.jpg" class="img"/>
+                </a>
+                <ul class="clear">
+                	<li class="list-img fl">
+                    	<a href="#">红米高透防滑贴膜（单片装）</a>
+                        <p class="money">9.9元</p>
+                        <a href="#">
+                        	<img src="img/im2.jpg" />
+                        </a>
+                    </li>
+                	<li class="list-img fl">
+                    	<a href="#">红米高透防滑贴膜（单片装）</a>
+                        <p class="money">9.9元</p>
+                        <a href="#">
+                        	<img src="img/im2.jpg" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        	<div class="fl love-r">
+            	<h2><span>HOT</span>热销商品排行</h2>
+                <ul>
+                	<li class="love-list clear">
+                    	<strong class="fl">1</strong>
+                        <p class="fl sell">
+                        	<a href="#">5200mAh移动电源</a>
+                        	<span>49元</span>
+                        </p>
+                        <a href="#" class="fl">
+                        	<img src=  />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

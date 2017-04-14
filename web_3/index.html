@@ -1,0 +1,1393 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/base.css" />
+<style>
+body{font-size:12px; color:#555; }
+a{font-size:12px; color:#555; }
+.nav{width:970px; height:40px; margin:10px auto 21px; }
+.logo a{display:block; width:140px; height:40px; background:url(img/logo.png); text-indent:-999em; }
+.nav input{width:229px; height:38px; border:1px solid #a0a0a0; border-right:none; margin-left:180px; }
+.but{width:51px; height:38px; background:#2b8adf; border:1px solid #1a67cb; padding-left:37px; line-height:38px; font-size:17px; font-weight:bold; color:#fff; position:relative; }
+.but i{width:14px; height:14px; background:url(img/da.png); position:absolute; top:12px; left:18px; }
+.nav ul{width:296px; margin-left:29px; }
+.nav-t{margin-right:21px; }
+.nav-t span{ width:16px; height:16px; background:url(img/top.png); margin:14px 4px 0 25px; }
+.nav-t a{margin-top:14px; line-height:15px; }
+.nav-t i{width:0; height:0; border:4px solid transparent; border-top:4px solid #555; margin-left:4px; margin-top:20px; }
+.nav-t .man{background:url(img/man.png); }
+.bor{border-left:1px solid #dcb290; padding-left:6px; margin-right:0; line-height:15px; margin-top:14px; }
+.bor a{margin-top:0; }
+.none{margin-right:6px; }
+.none span{margin-left:5px; }
+.sub-nav{width:970px; height:34px; border-bottom:3px solid #e6e6e6; margin:0 auto; }
+.sub-nav a{line-height:34px; margin-right:21px; font-size:15px; }
+.sub-nav .small{font-size:12px; line-height:32px; margin-top:2px; }
+.small i{width:0; height:0; border:4px solid transparent; border-top:4px solid #555; margin-top:15px; margin-left:4px; }
+.sub-nav .btn{width:78px; height:25px; background:#f2f2f2; border:1px solid #d1d1d1; font-size:12px; line-height:25px; color:#06a7e1; text-align:center; margin-right:0; margin-top:3px; }
+.sub-nav a:hover{color:#06a7e1; border-bottom:3px solid #06a7e1; }
+.banner{width:970px; height:390px; margin:0 auto 32px; }
+.banner-l{width:440px; }
+.banner-lt{position:relative; }
+.banner-lt img{width:420px; height:240px; margin-top:20px; margin-right:20px; }
+.yin{width:420px; height:48px; position:absolute; bottom:0; left:0; }
+.yin p{font-size:14px; color:#f1f1f1; line-height:26px; margin-left:6px; }
+.yin i{width:12px; height:12px; background:url(img/sprite.png); margin-left:5px; margin-top:4px; margin-right:4px; }
+.yin .play{background-position:-30px 0; }
+.yin .com{background-position:-60px 0; }
+.yin a{color:#909090; margin-right:3px; line-height:22px; }
+.yin .active{color:#fff; }
+.yin .right{width:56px; height:20px; color:#fff; background:#06a7e1; line-height:20px; text-align:center; margin-right:0; margin-top:2px; }
+.list{position:relative; }
+.list img{width:200px; height:110px; margin-top:20px; margin-right:20px; }
+.list a{line-height:22px; color:#f1f1f1; position:absolute; bottom:0; left:7px; }
+.banner-c{width:220px; }
+.banner-r{width:310px; }
+.banner-rt{position:relative; }
+.banner-rt{width:310px; height:110px; margin-top:20px; }
+.banner-rt img{width:310px; height:110px; }
+.banner-rt a{width:34px; height:20px; background:#59645f; color:#ccdada; text-align:center; line-height:20px; position:absolute; bottom:0; right:0; }
+.banner-rb{width:310px; height:240px; position:relative; margin-top:20px; }
+.banner-rb img{width:310px; height:240px; }
+.text{width:310px; height:20px; background:#888888; position:absolute; bottom:0; left:0; }
+.text a{line-height:20px; color:#fff; margin:0 6px; }
+.person{width:970px; margin:0 auto; }
+.person-t h2{font-size:24px; color:#909090; line-height:68px; margin-right:20px; }
+.person-t a{padding:0 10px; line-height:30px; margin-top:18px; }
+.person-t a:hover{background:#06a7e1; color:#fff; }
+.person-t img{margin-right:32px; margin-top:9px; }
+.man{width:200px; margin-right:20px; }
+.man a{display:block; }
+.man .tit{width:200px; height:72px; background:#f5f5f5; padding-top:8px; }
+.tit .tit-t{display:block; line-height:20px; margin-left:6px; margin-right:13px; }
+.tit-b i{width:12px; height:12px; background:url(img/sprite.png) -30px 0; margin:7px 5px 0; }
+.tit-b .com{background-position:-60px 0; }
+.tit-b span{color:#9f9090; line-height:29px; }
+.entry{width:190px; margin-right:20px; background:#f5f5f5; padding-top:21px; padding-left:10px; color:#909090； }
+.entry h3{font-size:18px; margin-bottom:15px; }
+.entry .top{margin-top:54px; margin-bottom:7px; }
+.entry a{display:block; width:180px; height:35px; background:#06a7e1; color:#fff; text-align:center; line-height:35px; margin-bottom:9px; }
+.person-r{width:40px; height:131px; background:#f5f5f5; line-height:25px; font-size:19px; padding:59px 25px 0; }
+.original-b{margin-bottom:32px; }
+.original-t{width:970px; height:50px; margin-top:46px; }
+.original-t a{font-size:19px; line-height:30px; padding:0 20px; }
+.original-t .active{background:#06a7e1; color:#fff; }
+.original-t a:hover{background:#06a7e1; color:#fff; }
+.original-bl{width:660px; }
+.original-bl img{margin-top:20px; margin-right:20px; }
+.original-br{width:310px; }
+.original-br li{margin-top:20px; }
+.original-br .last{margin-top:10px; }
+.original-br .img{margin-right:10px; }
+.girl p{line-height:22px; }
+.girl a{color:#909090; line-height:20px; }
+.tv-l{width:660px; margin-bottom:12px; }
+.tv-l a{display:block; }
+.tv-r{width:310px; }
+.header{position:relative; margin-right:20px; margin-bottom:20px; }
+.header a{display:block; }
+.header img{width:420px; height:240px; }
+.header-txt{width:410px; height:47px; position:absolute; bottom:0; left:0; padding:0 5px; }
+.header-txt h3{font-size:16px; line-height:25px; color:#f1f1f1; font-weight:normal; }
+.header-txt span{line-height:22px; color:#ddd; }
+.vip{margin-right:20px; margin-bottom:20px; position:relative; }
+.vip a{display:block; }
+.vip-txt{width:190px; height:38px; position:absolute; bottom:0; left:0; padding:0 5px; }
+.vip-txt h3{color:#f1f1f1; line-height:19px; font-weight:normal; }
+.vip-txt span{color:#bbb; line-height:19px; }
+.vip i{width:43px; height:45px; background:url(img/sprite.png) -60px -60px; position:absolute; top:0; left:0; }
+.vip .exclu{background-position:-180px -60px; }
+.vip .zizhi{background-position:-120px -60px; }
+.vip .money{background-position:0 -60px;}
+.tv{width:970px; }
+.tv-r{width:310px; }
+.ranking-t a{padding:0 10px; line-height:30px; margin-top:18px; margin-bottom:20px; }
+.ranking-t .active{background:#06a7e1; color:#fff; }
+.ranking-t a:hover{background:#06a7e1; color:#fff; }
+.ranking-c li{width:155px; height:22px; margin-bottom:8px; }
+.ranking-c span{width:20px; height:20px; background:#03a7e1; color:#fff; line-height:20px; text-align:center; margin-right:10px; }
+.ranking-c .color{background:#ef3f22; }
+.ranking-c a{line-height:22px; }
+.ranking-b a{margin-right:18px; line-height:30px; margin-bottom:10px; }
+.tv-r .img{display:block; margin-bottom:20px; }
+.skip{height:110px; position:relative; }
+.skip img{margin-right:10px; margin-bottom:10px; }
+.skip p{line-height:22px; }
+.skip a{line-height:20px; color:#909090; }
+.none img{margin-bottom:0; }
+.skip .dayu{width:57px; height:110px; background:url(img/dayu.png); position:absolute; top:0; right:0; }
+.south{width:660px; }
+.south h2{font-size:26px; line-height:68px; color:#909090; }
+.activity{width:310px; }
+.activity .active{display:block; padding:0 10px; line-height:30px; margin:18px 240px 20px 0; background:#06a7e1; color:#fff; }
+.activity .dan1{display:block; }
+.activity .dan2{display:block; width:145px; height:30px; background:#f5f5f5; text-align:center; line-height:30px; font-size:14px; }
+.activity .margin{margin-right:20px; }
+.variety li{width:310px; }
+.variety .font{color:#909090; }
+.tv-r .top{margin-top:10px; }
+.jokey-l{width:660px; margin-bottom:12px; }
+.jokey-l li{width:200px; margin-right:20px; margin-bottom:20px; }
+.jokey-t{position:relative; }
+.jokey-t p{height:20px; padding-left:45px; }
+.jokey-t a{color:#3399e0; }
+.jokey-t span{color:#909090; }
+.jokey-t .small{width:41px; height:41px; position:absolute; left:0; top:0; background:#fff; }
+.jokey-b{padding:11px 5px 0; background:#f5f5f5; }
+.jokey-b i{width:12px; height:12px; background:url(img/sprite.png) -30px 0; margin-top:10px; margin-right:8px; }
+.jokey-b .com{background-position:-60px 0; }
+.jokey-b .man{background-position:0 0;}
+.jokey-b span{color:#909090; margin:12px 16px 10px 0; }
+.jokey-r li{margin-bottom:20px; }
+.jokey-r img{margin-right:10px; }
+.jokey-r p{line-height:20px; }
+.jokey-r a{color:#909090; line-height:24px; }
+.music-l{width:660px; }
+.music-l a{display:block; }
+.music-l .jokey-l{margin-bottom:0; }
+.music-r .top{margin-top:0; }
+</style>
+</head>
+
+<body>
+	<div class="nav clear">
+    	<h1 class="logo fl">
+        	<a href="#">优酷</a>
+        </h1>
+        <input type="text" class="fl"/>
+        <a href="#" class="fl but">搜库
+        	<i></i>
+        </a>
+        <ul class="fr clear">
+        	<li class="fl nav-t clear">
+            	<span class="fl"></span>
+                <a href="#" class="fl">上传</a>
+                <i class="fl"></i>
+            </li>
+            <li class="fl nav-t clear">
+                <a href="#" class="fl">会员</a>
+            </li>
+             <li class="fl nav-t clear">
+                <a href="#" class="fl">APP下载</a>
+            </li>
+            <li class="fl nav-t clear none">
+            	<span class="fl man"></span>
+                <a href="#" class="fl">登录</a>
+            </li>
+            <li class="fl nav-t clear bor">
+                <a href="#" class="fl">注册</a>
+            </li>
+        </ul>
+    </div>
+    <div class="sub-nav clear">
+    	<a href="#" class="fl">首页</a>
+    	<a href="#" class="fl">电视剧</a>
+    	<a href="#" class="fl">电影</a>
+    	<a href="#" class="fl">综艺</a>
+    	<a href="#" class="fl">音乐</a>
+    	<a href="#" class="fl">动漫</a>
+    	<a href="#" class="fl">全部</a>
+    	<a href="#" class="fl small clear">
+        	<span class="fl">资讯·科技</span>
+            <i class="fl"></i>	
+        </a>
+    	<a href="#" class="fl small clear">
+        	<span class="fl">娱乐·搞笑</span>
+            <i class="fl"></i>	
+        </a>
+        <a href="#" class="fl small clear">
+        	<span class="fl">旅游·亲子</span>
+            <i class="fl"></i>	
+        </a>
+    	<a href="#" class="fl small">排行</a>
+    	<a href="#" class="fr btn">去个性版</a>
+    </div>
+    <div class="clear banner">
+    	<div class="fl banner-l">
+        	<div class="banner-lt">
+            	<a href="#">
+            		<img src="img/0.jpg" />
+                </a>
+                <div class="yin">
+                	<p>印尼找到失联客机残骸 已发现6具遗体</p>
+                    <div class="clear">
+                    	<i class="fl"></i>
+                        <a href="#" class="fl active">新视点</a>
+                    	<i class="fl play"></i>
+                        <a href="#" class="fl">25.9万</a>
+                    	<i class="fl com"></i>
+                        <a href="#" class="fl">258</a>
+                        <a href="#" class="fr right">深度阅读</a>
+                    </div>
+                </div>
+            </div>
+            <ul class="clear">
+            	<li class="fl list">
+                	<img src="img/71.jpg" />
+                    <a href="#">&lt;武媚娘&gt;夜赏烟花得圣宠</a>
+                </li>
+                <li class="fl list">
+                	<img src="img/71.jpg" />
+                    <a href="#" class="list-t">&lt;武媚娘&gt;夜赏烟花得圣宠</a>
+                </li>
+            </ul>
+        </div>
+    	<ul class="fl banner-c">
+        	<li class="fl list">
+                	<img src="img/71.jpg" />
+                    <a href="#">&lt;武媚娘&gt;夜赏烟花得圣宠</a>
+                </li>
+                <li class="fl list">
+                	<img src="img/71.jpg" />
+                    <a href="#">&lt;武媚娘&gt;夜赏烟花得圣宠</a>
+                </li>
+                <li class="fl list">
+                	<img src="img/71.jpg" />
+                    <a href="#">&lt;武媚娘&gt;夜赏烟花得圣宠</a>
+                </li>
+        </ul>
+    	<div class="fl banner-r">
+        	<div class="banner-rt">
+            	<img src="img/cat2.jpg" />
+                <a href="#">&gt;&gt;</a>
+            </div>
+            <div class="banner-rb">
+            	<img src="img/cat2.jpg" />
+                <p class="text">
+                	<a href="#" class="fl">年度最不想错过闺蜜真情感动</a>
+                	<a href="#" class="fr">详细信息&gt;&gt;</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="person">
+        <div class="clear person-t">
+            <h2 class="fl">个人中心</h2>
+            <a href="#" class="fl">猜你喜欢</a>
+            <a href="#" class="fl">观看记录</a>
+            <a href="#" class="fl">我的收藏</a>
+            <a href="#" class="fl">我的订阅</a>
+            <a href="#" class="fl">会员专享</a>
+        </div>
+        <div class="clear">
+        	<ul class="fl clear">
+            	<li class="fl man">
+                	<a href="#">
+                    	<img src="img/img.png" />
+                    </a>
+                    <div class="tit">
+                    	<a href="#" class="tit-t">白痴玩汽车开到冰湖上，坑不死你。</a>
+                        <p class="clear tit-b">
+                        	<a href="#" class="clear fl">
+                            	<i class="fl"></i>
+                                <span class="fl">164,252</span>
+                            </a>
+                            <a href="#" class="clear fl">
+                            	<i class="fl com"></i>
+                                <span class="fl">13</span>
+                            </a>
+                        </p>
+                    </div>
+                </li>
+                <li class="fl man">
+                	<a href="#">
+                    	<img src="img/img.png" />
+                    </a>
+                    <div class="tit">
+                    	<a href="#" class="tit-t">白痴玩汽车开到冰湖上，坑不死你。</a>
+                        <p class="clear tit-b">
+                        	<a href="#" class="clear fl">
+                            	<i class="fl"></i>
+                                <span class="fl">164,252</span>
+                            </a>
+                            <a href="#" class="clear fl">
+                            	<i class="fl com"></i>
+                                <span class="fl">13</span>
+                            </a>
+                        </p>
+                    </div>
+                </li>
+                <li class="fl man">
+                	<a href="#">
+                    	<img src="img/img.png" />
+                    </a>
+                    <div class="tit">
+                    	<a href="#" class="tit-t">做个好男人吧</a>
+                        <p class="clear tit-b">
+                        	<a href="#" class="clear fl">
+                            	<i class="fl"></i>
+                                <span class="fl">164,252</span>
+                            </a>
+                            <a href="#" class="clear fl">
+                            	<i class="fl com"></i>
+                                <span class="fl">13</span>
+                            </a>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <div class="fl entry">
+            	<h3>Hi,你好</h3>
+                <p>已看0分钟，击败0%的小伙伴</p>
+                <p class="top">登录可以攒时长玩升级哦~~~</p>
+                <a href="#">马上体验</a>
+            </div>
+            <a href="#" class="fl person-r">进入个人中心</a>
+        </div>
+    	<div class="clear original-t">
+            <a href="#" class="fl">最佳原创</a>
+            <a href="#" class="fl active">优酷出品</a>
+        </div>
+        <div class="clear original-b">
+        	<div class="fl original-bl">
+            	<ul class="clear">
+                	<li class="fl man">
+                	<a href="#">
+                    	<img src="img/img.png" />
+                    </a>
+                    <div class="tit">
+                    	<a href="#" class="tit-t">白痴玩汽车开到冰湖上，坑不死你。</a>
+                        <p class="clear tit-b">
+                        	<a href="#" class="clear fl">
+                            	<i class="fl"></i>
+                                <span class="fl">164,252</span>
+                            </a>
+                            <a href="#" class="clear fl">
+                            	<i class="fl com"></i>
+                                <span class="fl">13</span>
+                            </a>
+                        </p>
+                    </div>
+                </li>
+                    <li class="fl man">
+                        <a href="#">
+                            <img src="img/img.png" />
+                        </a>
+                        <div class="tit">
+                            <a href="#" class="tit-t">白痴玩汽车开到冰湖上，坑不死你。</a>
+                            <p class="clear tit-b">
+                                <a href="#" class="clear fl">
+                                    <i class="fl"></i>
+                                    <span class="fl">164,252</span>
+                                </a>
+                                <a href="#" class="clear fl">
+                                    <i class="fl com"></i>
+                                    <span class="fl">13</span>
+                                </a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="fl man">
+                        <a href="#">
+                            <img src="img/img.png" />
+                        </a>
+                        <div class="tit">
+                            <a href="#" class="tit-t">做个好男人吧</a>
+                            <p class="clear tit-b">
+                                <a href="#" class="clear fl">
+                                    <i class="fl"></i>
+                                    <span class="fl">164,252</span>
+                                </a>
+                                <a href="#" class="clear fl">
+                                    <i class="fl com"></i>
+                                    <span class="fl">13</span>
+                                </a>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <a href="#">
+                	<img src="img/640-110.jpg" />
+                </a>
+            </div>
+        	<div class="fl original-br">
+            	<ul>
+                	<li class="clear">
+                    	<a href="#" class="fl img">
+                    		<img src="img/img3.png" />
+                        </a>
+                        <div class="fl girl">
+                        	<p>暖女，受欢迎的唯一途径</p>
+                            <a href="#">&lt;深夜蜜语&gt;</a>
+                        </div>
+                    </li>
+                	<li class="clear">
+                    	<a href="#" class="fl img">
+                    		<img src="img/img3.png" />
+                        </a>
+                        <div class="fl girl">
+                        	<p>暖女，受欢迎的唯一途径</p>
+                            <a href="#">&lt;深夜蜜语&gt;</a>
+                        </div>
+                    </li>
+                	<li class="clear">
+                    	<a href="#" class="fl img">
+                    		<img src="img/img3.png" />
+                        </a>
+                        <div class="fl girl">
+                        	<p>暖女，受欢迎的唯一途径</p>
+                            <a href="#">&lt;深夜蜜语&gt;</a>
+                        </div>
+                    </li>
+                	<li class="clear">
+                    	<a href="#" class="fl img">
+                    		<img src="img/img3.png" />
+                        </a>
+                        <div class="fl girl">
+                        	<p>暖女，受欢迎的唯一途径</p>
+                            <a href="#">&lt;深夜蜜语&gt;</a>
+                        </div>
+                    </li>
+                	<li class="clear last">
+                    	<a href="#" class="fl img">
+                    		<img src="img/img3.png" />
+                        </a>
+                        <div class="fl girl">
+                        	<p>暖女，受欢迎的唯一途径</p>
+                            <a href="#">&lt;深夜蜜语&gt;</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tv clear">
+            <div class="fl tv-l">
+                <div class="clear person-t">
+                    <h2 class="fl">电视剧</h2>
+                    <a href="#" class="fl">最新</a>
+                    <a href="#" class="fl">韩剧</a>
+                    <a href="#" class="fl">大陆剧</a>
+                    <a href="#" class="fl">英美剧</a>
+                    <a href="#" class="fl">港台剧</a>
+                    <a href="#" class="fr">
+                    	<img src="img/100-25.png" />
+                    </a>
+                </div>
+                <div class="clear">
+                	<div class="fl">
+                    	<div class="header">
+                        	<a href="#">
+                            	<img src="img/0.jpg" />
+                            </a>
+                            <div class="header-txt">
+                            	<h3>鹿鼎记</h3>
+                            	<p class="clear">
+                                	<span class="fl">七“仙女”大战花心韦小宝</span>
+                                    <span class="fr">更新至26</span>
+                                </p>
+                            </div>
+                        </div>
+                        <ul class="clear">
+                        	<li class="vip fl">
+                            	<a href="#">
+                            		<img src="img/img4.png" />
+                                </a>
+                                <div class="vip-txt">
+                                    <h3>[美剧]升天号</h3>
+                                    <p class="clear">
+                                        <span class="fl">人类先驱开拓宇宙揭奥秘</span>
+                                        <span class="fr">6集全</span>
+                                	</p>
+                            	</div>
+                                <i></i>
+                            </li>
+                            <li class="vip fl">
+                            	<a href="#">
+                            		<img src="img/img4.png" />
+                                </a>
+                                <div class="vip-txt">
+                                    <h3>[美剧]升天号</h3>
+                                    <p class="clear">
+                                        <span class="fl">人类先驱开拓宇宙揭奥秘</span>
+                                        <span class="fr">6集全</span>
+                                	</p>
+                            	</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="fl">
+                        <li class="vip">
+                            <a href="#">
+                                <img src="img/img4.png" />
+                            </a>
+                            <div class="vip-txt">
+                                <h3>[美剧]升天号</h3>
+                                <p class="clear">
+                                    <span class="fl">人类先驱开拓宇宙揭奥秘</span>
+                                    <span class="fr">6集全</span>
+                                </p>
+                            </div>
+                            <i class="exclu"></i>
+                        </li>
+                        <li class="vip">
+                            <a href="#">
+                                <img src="img/img4.png" />
+                            </a>
+                            <div class="vip-txt">
+                                <h3>[美剧]升天号</h3>
+                                <p class="clear">
+                                    <span class="fl">人类先驱开拓宇宙揭奥秘</span>
+                                    <span class="fr">6集全</span>
+                                </p>
+                            </div>
+                            <i class="exclu"></i>
+                        </li>
+                        <li class="vip">
+                            <a href="#">
+                                <img src="img/img4.png" />
+                            </a>
+                            <div class="vip-txt">
+                                <h3>[美剧]升天号</h3>
+                                <p class="clear">
+                                    <span class="fl">人类先驱开拓宇宙揭奥秘</span>
+                                    <span class="fr">6集全</span>
+                                </p>
+                            </div>
+                            <i class="exclu"></i>
+                        </li>
+                   </ul>
+                </div>
+            </div>
+            <div class="fl tv-r">
+            	<div>
+                	<div class="ranking-t clear">
+                    	<a href="#" class="fl active">电视剧排行</a>
+                    	<a href="#" class="fl">大陆</a>
+                    	<a href="#" class="fl">香港</a>
+                    	<a href="#" class="fl">台湾</a>
+                    </div>
+                    <div class="ranking-c clear">
+                    	<ul class="fl">
+                        	<li class="clear">
+                            	<span class="fl color">1</span>
+                                <a href="#" class="fl">武媚娘传奇 TV版</a>
+                            </li>
+                        	<li class="clear">
+                            	<span class="fl color">2</span>
+                                <a href="#" class="fl">武媚娘传奇 TV版</a>
+                            </li>
+                        	<li class="clear">
+                            	<span class="fl color">3</span>
+                                <a href="#" class="fl">武媚娘传奇 TV版</a>
+                            </li>
+                        	<li class="clear">
+                            	<span class="fl">4</span>
+                                <a href="#" class="fl">武媚娘传奇 TV版</a>
+                            </li>
+                        	<li class="clear">
+                            	<span class="fl">5</span>
+                                <a href="#" class="fl">武媚娘传奇 TV版</a>
+                            </li>
+                        </ul>
+                        <ul class="fl">
+                        	<li class="clear">
+                            	<span class="fl">6</span>
+                                <a href="#" class="fl">武媚娘传奇 TV版</a>
+                            </li>
+                        	<li class="clear">
+                            	<span class="fl">7</span>
+                                <a href="#" class="fl">武媚娘传奇 TV版</a>
+                            </li>
+                        	<li class="clear">
+                            	<span class="fl">8</span>
+                                <a href="#" class="fl">武媚娘传奇 TV版</a>
+                            </li>
+                        	<li class="clear">
+                            	<span class="fl">9</span>
+                                <a href="#" class="fl">武媚娘传奇 TV版</a>
+                            </li>
+                        	<li class="clear">
+                            	<span class="fl">10</span>
+                                <a href="#" class="fl">武媚娘传奇 TV版</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ranking-b clear">
+                    	<a href="#" class="fl">指数排行榜&gt;&gt;</a>
+                    	<a href="#" class="fl">更多排行&gt;&gt;</a>
+                    </div>
+                </div>
+                <a href="#" class="img">
+                	<img src="img/310-50-b.jpg" />
+                </a>
+                <ul class="skip">
+                    <li class="clear"> 
+                        <a href="#" class="fl">
+                            <img src="img/img2.png" />
+                        </a>
+                        <div class="fl">
+                        	<p>百岁山完美星开幕</p>
+                            <a href="#">好声音pk好歌曲</a>
+                        </div>
+                    </li>
+                    <li class="clear"> 
+                        <a href="#" class="fl none">
+                            <img src="img/img2.png" />
+                        </a>
+                        <div class="fl">
+                        	<p>百岁山完美星开幕</p>
+                            <a href="#">好声音pk好歌曲</a>
+                        </div>
+                    </li>
+                    <a href="#" class="dayu"></a>
+                </ul>
+            </div>
+        </div>
+        <div class="clear">
+            <div class="fl tv-l south">
+            	<h2>韩剧</h2>
+                <ul class="clear">
+                    <li class="vip fl">
+                        <a href="#">
+                            <img src="img/img4.png" />
+                        </a>
+                        <div class="vip-txt">
+                            <h3>[美剧]升天号</h3>
+                            <p class="clear">
+                                <span class="fl">人类先驱开拓宇宙揭奥秘</span>
+                                <span class="fr">6集全</span>
+                            </p>
+                        </div>
+                        <i class="exclu"></i>
+                    </li>
+                    <li class="vip fl">
+                        <a href="#">
+                            <img src="img/img4.png" />
+                        </a>
+                        <div class="vip-txt">
+                            <h3>[美剧]升天号</h3>
+                            <p class="clear">
+                                <span class="fl">人类先驱开拓宇宙揭奥秘</span>
+                                <span class="fr">6集全</span>
+                            </p>
+                        </div>
+                        <i class="exclu"></i>
+                    </li>
+                    <li class="vip fl">
+                        <a href="#">
+                            <img src="img/img4.png" />
+                        </a>
+                        <div class="vip-txt">
+                            <h3>[美剧]升天号</h3>
+                            <p class="clear">
+                                <span class="fl">人类先驱开拓宇宙揭奥秘</span>
+                                <span class="fr">6集全</span>
+                            </p>
+                        </div>
+                        <i class="exclu"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="fl tv-r">
+                <div class="ranking-t clear">
+                    <a href="#" class="fl">韩剧排行</a>
+                    <a href="#" class="fl active">英美剧排行</a>
+                </div>
+                <div class="ranking-c clear">
+                    <ul class="fl">
+                        <li class="clear">
+                            <span class="fl color">1</span>
+                            <a href="#" class="fl">行尸走肉 第五季</a>
+                        </li>
+                        <li class="clear">
+                            <span class="fl color">2</span>
+                            <a href="#" class="fl">行尸走肉 第五季</a>
+                        </li>
+                        <li class="clear">
+                            <span class="fl color">3</span>
+                            <a href="#" class="fl">行尸走肉 第五季</a>
+                        </li>
+                        <li class="clear">
+                            <span class="fl">4</span>
+                            <a href="#" class="fl">行尸走肉 第五季</a>
+                        </li>
+                    </ul>
+                    <ul class="fl">
+                        <li class="clear">
+                            <span class="fl">5</span>
+                            <a href="#" class="fl">行尸走肉 第五季</a>
+                        </li>
+                        <li class="clear">
+                            <span class="fl">6</span>
+                            <a href="#" class="fl">行尸走肉 第五季</a>
+                        </li>
+                        <li class="clear">
+                            <span class="fl">7</span>
+                            <a href="#" class="fl">行尸走肉 第五季</a>
+                        </li>
+                        <li class="clear">
+                            <span class="fl">8</span>
+                            <a href="#" class="fl">行尸走肉 第五季</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+            <div class="fl tv-l">
+                <div class="clear person-t">
+                    <h2 class="fl">电影·预告片</h2>
+                    <a href="#" class="fl">最新</a>
+                    <a href="#" class="fl">华语</a>
+                    <a href="#" class="fl">好莱坞</a>
+                    <a href="#" class="fl">预告片</a>
+                    <a href="#" class="fl">女性</a>
+                </div>
+                <div class="clear">
+                	<div class="fl">
+                    	<div class="header">
+                        	<a href="#">
+                            	<img src="img/0.jpg" />
+                            </a>
+                            <div class="header-txt">
+                            	<h3>【全程直击】&lt;微爱&gt;新年答谢会</h3>
+                                <span class="fl">[预告片]陈赫涂红唇献吻顾长卫</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="fl">
+                        <li class="vip">
+                            <a href="#">
+                                <img src="img/img4.png" />
+                            </a>
+                            <div class="vip-txt">
+                                <h3>[美剧]升天号</h3>
+                                <span class="fl">人类先驱开拓宇宙揭奥秘</span>
+                            </div>
+                        </li>
+                        <li class="vip">
+                            <a href="#">
+                                <img src="img/img4.png" />
+                            </a>
+                            <div class="vip-txt">
+                                <h3>[美剧]升天号</h3>
+                                <span class="fl">人类先驱开拓宇宙揭奥秘</span>
+                            </div>
+                            <i class="zizhi"></i>
+                        </li>
+                   </ul>
+                </div>
+            </div>
+            <div class="fl tv-r">
+            	<div>
+                	<div class="ranking-t clear">
+                    	<a href="#" class="fl active">电影排行</a>
+                    	<a href="#" class="fl">华语</a>
+                    	<a href="#" class="fl">欧美</a>
+                    	<a href="#" class="fl">日韩</a>
+                    	<a href="#" class="fl">院线</a>
+                    </div>
+                    <div class="ranking-c clear">
+                    	<ul class="fl">
+                        	<li class="clear">
+                            	<span class="fl color">1</span>
+                                <a href="#" class="fl">好命先生</a>
+                            </li>
+                        	<li class="clear">
+                            	<span class="fl color">2</span>
+                                <a href="#" class="fl">好命先生</a>
+                            </li>
+                        	<li class="clear">
+                            	<span class="fl color">3</span>
+                                <a href="#" class="fl">好命先生</a>
+                            </li>
+                        	<li class="clear">
+                            	<span class="fl">4</span>
+                                <a href="#" class="fl">好命先生</a>
+                            </li>
+                        	<li class="clear">
+                            	<span class="fl">5</span>
+                                <a href="#" class="fl">好命先生</a>
+                            </li>
+                        </ul>
+                        <ul class="fl">
+                        	<li class="clear">
+                            	<span class="fl">6</span>
+                                <a href="#" class="fl">好命先生</a>
+                            </li>
+                        	<li class="clear">
+                            	<span class="fl">7</span>
+                                <a href="#" class="fl">好命先生</a>
+                            </li>
+                        	<li class="clear">
+                            	<span class="fl">8</span>
+                                <a href="#" class="fl">好命先生</a>
+                            </li>
+                        	<li class="clear">
+                            	<span class="fl">9</span>
+                                <a href="#" class="fl">好命先生</a>
+                            </li>
+                        	<li class="clear">
+                            	<span class="fl">10</span>
+                                <a href="#" class="fl">好命先生</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ranking-b clear">
+                    	<a href="#" class="fl">指数排行榜&gt;&gt;</a>
+                    	<a href="#" class="fl">更多排行&gt;&gt;</a>
+                    </div>
+                </div>
+                <a href="#" class="img">
+                	<img src="img/310-50.gif" />
+                </a>
+            </div>
+        </div>
+        <div class="clear">
+            <div class="fl tv-l">
+                <div class="clear person-t">
+                    <h2 class="fl">院线·会员</h2>
+                    <a href="#" class="fl">热播大片</a>
+                    <a href="#" class="fl">华语精选</a>
+                    <a href="#" class="fl">好莱坞精选</a>
+                    <a href="#" class="fl">2014钢丝节</a>
+                    <a href="#" class="fl">即将上线</a>
+                </div>
+                <ul class="fl clear">
+                    <li class="vip fl">
+                        <a href="#">
+                            <img src="img/img4.png" />
+                        </a>
+                        <div class="vip-txt">
+                            <h3>[美剧]升天号</h3>
+                            <span class="fl">人类先驱开拓宇宙揭奥秘</span>
+                        </div>
+                        <i></i>
+                    </li>
+                    <li class="vip fl">
+                        <a href="#">
+                            <img src="img/img4.png" />
+                        </a>
+                        <div class="vip-txt">
+                            <h3>[美剧]升天号</h3>
+                            <span class="fl">人类先驱开拓宇宙揭奥秘</span>
+                        </div>
+                        <i class="money"></i>
+                    </li>
+                    <li class="vip fl">
+                        <a href="#">
+                            <img src="img/img4.png" />
+                        </a>
+                        <div class="vip-txt">
+                            <h3>[美剧]升天号</h3>
+                            <span class="fl">人类先驱开拓宇宙揭奥秘</span>
+                        </div>
+                        <i></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="fl activity">
+            	<a href="#" class="active">会员活动</a>
+                <ul>
+                	<li class="fl margin">
+                    	<a href="#" class="dan1">
+                        	<img src="img/dan.png" />
+                        </a>
+                        <a href="#" class="dan2">优酷会员双蛋有好礼</a>
+                    </li>
+                    <li class="fl">
+                    	<a href="#" class="dan1">
+                        	<img src="img/dan.png" />
+                        </a>
+                        <a href="#" class="dan2">优酷会员双蛋有好礼</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="clear">
+            <div class="fl tv-l">
+                <div class="clear person-t">
+                    <h2 class="fl">综艺</h2>
+                    <a href="#" class="fl">综艺热播</a>
+                    <a href="#" class="fl">大陆综艺</a>
+                    <a href="#" class="fl">日韩综艺</a>
+                    <a href="#" class="fl">港台· 欧美</a>
+                </div>
+                <div class="clear">
+                	<div class="fl">
+                    	<div class="header">
+                        	<a href="#">
+                            	<img src="img/0.jpg" />
+                            </a>
+                            <div class="header-txt">
+                            	<h3>鹿鼎记</h3>
+                            	<p class="clear">
+                                	<span class="fl">七“仙女”大战花心韦小宝</span>
+                                    <span class="fr">更新至26</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="fl">
+                        <li class="vip">
+                            <a href="#">
+                                <img src="img/img4.png" />
+                            </a>
+                            <div class="vip-txt">
+                                <h3>[美剧]升天号</h3>
+                                <p class="clear">
+                                    <span class="fl">人类先驱开拓宇宙揭奥秘</span>
+                                    <span class="fr">6集全</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="vip">
+                            <a href="#">
+                                <img src="img/img4.png" />
+                            </a>
+                            <div class="vip-txt">
+                                <h3>[美剧]升天号</h3>
+                                <p class="clear">
+                                    <span class="fl">人类先驱开拓宇宙揭奥秘</span>
+                                    <span class="fr">6集全</span>
+                                </p>
+                            </div>
+                        </li>
+                   </ul>
+                </div>
+                <a href="#">
+                	<img src="img/640-110(1).jpg" />
+                </a>
+            </div>
+            <div class="fl tv-r">
+            	<div>
+                	<div class="ranking-t clear">
+                    	<a href="#" class="fl active">综艺排行</a>
+                    	<a href="#" class="fl">大陆</a>
+                    	<a href="#" class="fl">日韩</a>
+                    	<a href="#" class="fl">台湾</a>
+                    </div>
+                    <div class="ranking-c">
+                    	<ul class="variety">
+                        	<li class="clear">
+                            	<span class="fl color">1</span>
+                                <a href="#" class="fl">孙杨八块腹肌看羞baby</a>
+                                <a href="#" class="fr font">奔跑吧兄弟2014</a>
+                            </li>
+                        	<li class="clear">
+                            	<span class="fl color">2</span>
+                                <a href="#" class="fl">孙杨八块腹肌看羞baby</a>
+                                <a href="#" class="fr font">奔跑吧兄弟2014</a>
+                            </li>
+                            <li class="clear">
+                            	<span class="fl color">3</span>
+                                <a href="#" class="fl">孙杨八块腹肌看羞baby</a>
+                                <a href="#" class="fr font">奔跑吧兄弟2014</a>
+                            </li>
+                            <li class="clear">
+                            	<span class="fl">4</span>
+                                <a href="#" class="fl">孙杨八块腹肌看羞baby</a>
+                                <a href="#" class="fr font">奔跑吧兄弟2014</a>
+                            </li>
+                            <li class="clear">
+                            	<span class="fl">5</span>
+                                <a href="#" class="fl">孙杨八块腹肌看羞baby</a>
+                                <a href="#" class="fr font">奔跑吧兄弟2014</a>
+                            </li>
+                            <li class="clear">
+                            	<span class="fl">6</span>
+                                <a href="#" class="fl">孙杨八块腹肌看羞baby</a>
+                                <a href="#" class="fr font">奔跑吧兄弟2014</a>
+                            </li>
+                            <li class="clear">
+                            	<span class="fl">7</span>
+                                <a href="#" class="fl">孙杨八块腹肌看羞baby</a>
+                                <a href="#" class="fr font">奔跑吧兄弟2014</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ranking-b clear">
+                    	<a href="#" class="fl">指数排行榜&gt;&gt;</a>
+                    	<a href="#" class="fl">更多排行&gt;&gt;</a>
+                    </div>
+                </div>
+                <ul class="skip top">
+                    <li class="clear"> 
+                        <a href="#" class="fl">
+                            <img src="img/img2.png" />
+                        </a>
+                        <div class="fl">
+                        	<p>百岁山完美星开幕</p>
+                            <a href="#">好声音pk好歌曲</a>
+                        </div>
+                    </li>
+                    <li class="clear"> 
+                        <a href="#" class="fl none">
+                            <img src="img/img2.png" />
+                        </a>
+                        <div class="fl">
+                        	<p>百岁山完美星开幕</p>
+                            <a href="#">好声音pk好歌曲</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="clear person-t">
+            <h2 class="fl">娱乐· 搞笑</h2>
+            <a href="#" class="fl">娱乐资讯</a>
+            <a href="#" class="fl">电视资讯</a>
+            <a href="#" class="fl">电影资讯</a>
+        </div>
+        <div class="clear">
+        	<ul class="fl clear jokey-l">
+            	<li class="fl">
+                	<div class="jokey-t">
+                    	<p class="clear ">
+                        	<a href="#" class="fl">关爱八卦</a>
+                            <span class="fr">35.1万订阅</span>
+                        </p>
+                        <a href="#">
+                            <img src="img/img.png" />
+                        </a>
+                        <a href="#" class="small">
+                        	<img src="img/img5.png" />
+                        </a>
+                    </div>
+                    <div class="jokey-b">
+                    	<a href="#">于正的男人之&lt;宫锁小鲜肉&gt;</a>
+                        <p class="clear">
+                        	<a href="#" class="clear fl">
+                            	<i class="fl"></i>
+                                <span class="fl">164,252</span>
+                            </a>
+                            <a href="#" class="clear fl">
+                            	<i class="fl com"></i>
+                                <span class="fl">13</span>
+                            </a>
+                        </p>
+                    </div>
+                </li>
+                <li class="fl">
+                	<div class="jokey-t">
+                    	<p class="clear ">
+                        	<a href="#" class="fl">关爱八卦</a>
+                            <span class="fr">35.1万订阅</span>
+                        </p>
+                        <a href="#">
+                            <img src="img/img.png" />
+                        </a>
+                        <a href="#" class="small">
+                        	<img src="img/img5.png" />
+                        </a>
+                    </div>
+                    <div class="jokey-b">
+                    	<a href="#">于正的男人之&lt;宫锁小鲜肉&gt;</a>
+                        <p class="clear">
+                        	<a href="#" class="clear fl">
+                            	<i class="fl"></i>
+                                <span class="fl">164,252</span>
+                            </a>
+                            <a href="#" class="clear fl">
+                            	<i class="fl com"></i>
+                                <span class="fl">13</span>
+                            </a>
+                        </p>
+                    </div>
+                </li>
+                <li class="fl">
+                	<div class="jokey-t">
+                    	<p class="clear ">
+                        	<a href="#" class="fl">关爱八卦</a>
+                            <span class="fr">35.1万订阅</span>
+                        </p>
+                        <a href="#">
+                            <img src="img/img.png" />
+                        </a>
+                        <a href="#" class="small">
+                        	<img src="img/img5.png" />
+                        </a>
+                    </div>
+                    <div class="jokey-b">
+                    	<a href="#">于正的男人之&lt;宫锁小鲜肉&gt;</a>
+                        <p class="clear">
+                        	<a href="#" class="clear fl">
+                            	<i class="fl"></i>
+                                <span class="fl">164,252</span>
+                            </a>
+                            <a href="#" class="clear fl">
+                            	<i class="fl com"></i>
+                                <span class="fl">13</span>
+                            </a>
+                        </p>
+                    </div>
+                </li>
+                <li class="fl">
+                	<div class="jokey-t">
+                    	<p class="clear ">
+                        	<a href="#" class="fl">关爱八卦</a>
+                            <span class="fr">35.1万订阅</span>
+                        </p>
+                        <a href="#">
+                            <img src="img/img.png" />
+                        </a>
+                        <a href="#" class="small">
+                        	<img src="img/img5.png" />
+                        </a>
+                    </div>
+                    <div class="jokey-b">
+                    	<a href="#">于正的男人之&lt;宫锁小鲜肉&gt;</a>
+                        <p class="clear">
+                        	<a href="#" class="clear fl">
+                            	<i class="fl"></i>
+                                <span class="fl">164,252</span>
+                            </a>
+                            <a href="#" class="clear fl">
+                            	<i class="fl com"></i>
+                                <span class="fl">13</span>
+                            </a>
+                        </p>
+                    </div>
+                </li>
+                <li class="fl">
+                	<div class="jokey-t">
+                    	<p class="clear ">
+                        	<a href="#" class="fl">关爱八卦</a>
+                            <span class="fr">35.1万订阅</span>
+                        </p>
+                        <a href="#">
+                            <img src="img/img.png" />
+                        </a>
+                        <a href="#" class="small">
+                        	<img src="img/img5.png" />
+                        </a>
+                    </div>
+                    <div class="jokey-b">
+                    	<a href="#">于正的男人之&lt;宫锁小鲜肉&gt;</a>
+                        <p class="clear">
+                        	<a href="#" class="clear fl">
+                            	<i class="fl"></i>
+                                <span class="fl">164,252</span>
+                            </a>
+                            <a href="#" class="clear fl">
+                            	<i class="fl com"></i>
+                                <span class="fl">13</span>
+                            </a>
+                        </p>
+                    </div>
+                </li>
+                <li class="fl">
+                	<div class="jokey-t">
+                    	<p class="clear ">
+                        	<a href="#" class="fl">关爱八卦</a>
+                            <span class="fr">35.1万订阅</span>
+                        </p>
+                        <a href="#">
+                            <img src="img/img.png" />
+                        </a>
+                        <a href="#" class="small">
+                        	<img src="img/img5.png" />
+                        </a>
+                    </div>
+                    <div class="jokey-b">
+                    	<a href="#">于正的男人之&lt;宫锁小鲜肉&gt;</a>
+                        <p class="clear">
+                        	<a href="#" class="clear fl">
+                            	<i class="fl"></i>
+                                <span class="fl">164,252</span>
+                            </a>
+                            <a href="#" class="clear fl">
+                            	<i class="fl com"></i>
+                                <span class="fl">13</span>
+                            </a>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="fl jokey-r">
+                <li class="clear"> 
+                    <a href="#" class="fl">
+                        <img src="img/img2.png" />
+                    </a>
+                    <div class="fl">
+                        <p>百岁山完美星开幕</p>
+                        <a href="#">好声音pk好歌曲</a>
+                    </div>
+                </li>
+                <li class="clear"> 
+                    <a href="#" class="fl">
+                        <img src="img/img2.png" />
+                    </a>
+                    <div class="fl">
+                        <p>百岁山完美星开幕</p>
+                        <a href="#">好声音pk好歌曲</a>
+                    </div>
+                </li>
+                <li class="clear"> 
+                    <a href="#" class="fl">
+                        <img src="img/img2.png" />
+                    </a>
+                    <div class="fl">
+                        <p>百岁山完美星开幕</p>
+                        <a href="#">好声音pk好歌曲</a>
+                    </div>
+                </li>
+                <li class="clear"> 
+                    <a href="#" class="fl">
+                        <img src="img/img2.png" />
+                    </a>
+                    <div class="fl">
+                        <p>百岁山完美星开幕</p>
+                        <a href="#">好声音pk好歌曲</a>
+                    </div>
+                </li>
+                <li class="clear"> 
+                    <a href="#" class="fl">
+                        <img src="img/img2.png" />
+                    </a>
+                    <div class="fl">
+                        <p>百岁山完美星开幕</p>
+                        <a href="#">好声音pk好歌曲</a>
+                    </div>
+                </li>
+                <li class="clear"> 
+                    <a href="#" class="fl">
+                        <img src="img/img2.png" />
+                    </a>
+                    <div class="fl">
+                        <p>百岁山完美星开幕</p>
+                        <a href="#">好声音pk好歌曲</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="clear">
+        	<div class="fl music-l">
+            	<div class="clear person-t">
+                    <h2 class="fl">音乐</h2>
+                    <a href="#" class="fl">最热音乐</a>
+                    <a href="#" class="fl">华语音乐</a>
+                    <a href="#" class="fl">欧美音乐</a>
+                    <a href="#" class="fl">日韩音乐</a>
+                    <a href="#" class="fl">音乐牛人</a>
+                </div>
+                <ul class="clear jokey-l">
+                    <li class="fl">
+                        <a href="#">
+                            <img src="img/cai.png" />
+                        </a>
+                        <div class="jokey-b">
+                            <a href="#">蔡依林再发大尺度MV-第二性</a>
+                            <p class="clear">
+                                <a href="#" class="clear fl">
+                                    <i class="fl"></i>
+                                    <span class="fl">6.0万</span>
+                                </a>
+                                <a href="#" class="clear fl">
+                                    <i class="fl man"></i>
+                                    <span class="fl">七里外的风车</span>
+                                </a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="fl">
+                        <a href="#">
+                            <img src="img/cai.png" />
+                        </a>
+                        <div class="jokey-b">
+                            <a href="#">蔡依林再发大尺度MV-第二性</a>
+                            <p class="clear">
+                                <a href="#" class="clear fl">
+                                    <i class="fl"></i>
+                                    <span class="fl">6.0万</span>
+                                </a>
+                                <a href="#" class="clear fl">
+                                    <i class="fl man"></i>
+                                    <span class="fl">七里外的风车</span>
+                                </a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="fl">
+                        <a href="#">
+                            <img src="img/cai.png" />
+                        </a>
+                        <div class="jokey-b">
+                            <a href="#">蔡依林再发大尺度MV-第二性</a>
+                            <p class="clear">
+                                <a href="#" class="clear fl">
+                                    <i class="fl"></i>
+                                    <span class="fl">6.0万</span>
+                                </a>
+                                <a href="#" class="clear fl">
+                                    <i class="fl man"></i>
+                                    <span class="fl">七里外的风车</span>
+                                </a>
+                            </p>
+                        </div>
+                    </li>
+            	</ul>
+                <a href="#">
+                	<img src="img/mei.png" />
+                </a>
+            </div>
+        	<div class="fl music-r">
+            	<div class="fl tv-r">
+            	<div>
+                	<div class="ranking-t clear">
+                    	<a href="#" class="fl active">华语榜</a>
+                    	<a href="#" class="fl">欧美榜</a>
+                    	<a href="#" class="fl">日韩榜</a>
+                    </div>
+                    <div class="ranking-c">
+                    	<ul class="variety">
+                        	<li class="clear">
+                            	<span class="fl color">1</span>
+                                <a href="#" class="fl">赞了</a>
+                                <a href="#" class="fr font">裴涩琪</a>
+                            </li>
+                        	<li class="clear">
+                            	<span class="fl color">2</span>
+                                <a href="#" class="fl">赞了</a>
+                                <a href="#" class="fr font">裴涩琪</a>
+                            </li>
+                            <li class="clear">
+                            	<span class="fl color">3</span>
+                                <a href="#" class="fl">赞了</a>
+                                <a href="#" class="fr font">裴涩琪</a>
+                            </li>
+                            <li class="clear">
+                            	<span class="fl">4</span>
+                                <a href="#" class="fl">赞了</a>
+                                <a href="#" class="fr font">裴涩琪</a>
+                            </li>
+                            <li class="clear">
+                            	<span class="fl">5</span>
+                                <a href="#" class="fl">赞了</a>
+                                <a href="#" class="fr font">裴涩琪</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ranking-b clear">
+                    	<a href="#" class="fl">指数排行榜&gt;&gt;</a>
+                    	<a href="#" class="fl">更多排行&gt;&gt;</a>
+                    </div>
+                </div>
+                <ul class="skip top">
+                    <li class="clear"> 
+                        <a href="#" class="fl">
+                            <img src="img/img2.png" />
+                        </a>
+                        <div class="fl">
+                        	<p>百岁山完美星开幕</p>
+                            <a href="#">好声音pk好歌曲</a>
+                        </div>
+                    </li>
+                    <li class="clear"> 
+                        <a href="#" class="fl none">
+                            <img src="img/img2.png" />
+                        </a>
+                        <div class="fl">
+                        	<p>百岁山完美星开幕</p>
+                            <a href="#">好声音pk好歌曲</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
