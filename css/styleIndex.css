@@ -1,0 +1,185 @@
+*{
+    margin:0;
+    padding:0;
+}
+html, body, .block {
+    height: 100%;
+    user-select:none;
+}
+.pushpin-demo-nav{
+    z-index:999;
+    background:#3d454d;
+}
+nav .brand-logo{
+    color:#bdbdbd;    
+    background: #383f45;
+    padding: 0 20px;
+}
+.content{
+    height:100%;
+    overflow:hidden;
+    position:relative; 
+    left:0; 
+    top:0;
+}
+/**
+    firstPage
+**/
+#firstPage .content{
+    background:#000;
+}
+.content strong{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 1000px;
+    height: 1000px;
+    background: -webkit-radial-gradient(center center, 500px 500px ,rgba(50,50,50,1), rgba(0,0,0,0));
+    background: -moz-radial-gradient(center center, 500px 500px ,rgba(50,50,50,1), rgba(0,0,0,0));
+    background: -ms-radial-gradient(center center, 500px 500px ,rgba(50,50,50,1), rgba(0,0,0,0));
+    background: -o-radial-gradient(center center, 500px 500px ,rgba(50,50,50,1), rgba(0,0,0,0));
+    background: radial-gradient(center center, 500px 500px ,rgba(50,50,50,1), rgba(0,0,0,0));
+    margin-left: -500px;
+    margin-top: -500px;
+    -webkit-transform: translateY(200px) rotateX(90deg);
+    -moz-transform: translateY(200px) rotateX(90deg);
+    -ms-transform: translateY(200px) rotateX(90deg);
+    -o-transform: translateY(200px) rotateX(90deg);
+    transform: translateY(200px) rotateX(90deg);
+}
+.page1_box{
+    width:150px; 
+    height:230px; 
+    position:absolute; 
+    left:50%; 
+    top:50%; 
+    margin-left:-75px; 
+    margin-top:-115px; 
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+         -o-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform: perspective(800px) rotateX(0deg) rotateY(0deg);
+       -moz-transform: perspective(800px) rotateX(0deg) rotateY(0deg);
+        -ms-transform: perspective(800px) rotateX(0deg) rotateY(0deg);
+         -o-transform: perspective(800px) rotateX(0deg) rotateY(0deg);
+            transform: perspective(800px) rotateX(0deg) rotateY(0deg);
+    cursor:pointer; 
+}
+.page1_box div{
+    background:#000; 
+    position:absolute; 
+    top:0; 
+    left:0; 
+    width:100%; 
+    height:100%; 
+    border:1px solid #fff; 
+    box-shadow:0 0 15px 3px #fff;
+    border-radius:15px; 
+    -webkit-transform: rotateY(0deg) translateZ(0px);
+       -moz-transform: rotateY(0deg) translateZ(0px);
+        -ms-transform: rotateY(0deg) translateZ(0px);
+         -o-transform: rotateY(0deg) translateZ(0px);
+            transform: rotateY(0deg) translateZ(0px);=
+}
+.inside div{
+    height:180px;
+}
+.page1_box .color{
+    background:#000; 
+}
+.page1_box div:hover{
+    box-shadow:inset 0 0 10px 3px yellow,0 0 20px 3px yellow; 
+}
+.page1_box span{
+    display: block;
+    font-size: 40px;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 50px;
+    color: #777575;
+}
+.page1_box em{
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    line-height: 100px;
+    font-style: normal;
+    color: #777575;
+}
+/**
+    secondPage
+**/
+@keyframes change{
+    from{
+        background:skyblue url(../img/aircraft.png) no-repeat -200px 200px;
+    }
+    to{
+        background:black url(../img/aircraft.png) no-repeat 2000px -100px;
+    }
+}
+@keyframes one{
+    from{
+        margin-left:0;
+    }
+    to{
+        margin-left:-100%;
+    }
+}
+@keyframes two{
+    from{
+        margin-left:0;
+    }
+    to{
+        margin-left:-200%;
+    }
+}
+@keyframes three{
+    from{
+        margin-left:0;
+    }
+    to{
+        margin-left:-400%;
+    }
+}
+#secondPage ul{
+    width:100%;
+    height:100%;
+    position:relative;
+    animation:change 5s linear 0s infinite alternate;
+    overflow:hidden;
+}
+#secondPage ul li{
+    list-style:none;
+    width:400%;
+    height:400px;
+    position:absolute;
+    left:0;
+    top:30px;
+}
+#secondPage ul li:nth-child(1){
+    background:url(../img/cloud1.png) repeat-x;
+    animation: one 30s linear 0s infinite alternate;/* 往返 */
+}
+#secondPage ul li:nth-child(2){
+    background:url(../img/cloud2.png) repeat-x;
+    animation: two 30s linear 0s infinite alternate;
+}
+#secondPage ul li:nth-child(3){
+    background:url(../img/cloud3.png) repeat-x;
+    animation: three 30s linear 0s infinite alternate;
+}
+#secondPage .map{    
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;    
+    box-shadow: 1px 1px 16px 0px #999;
+    border-radius: 5px;
+    border: 1px solid skyblue;
+}
+#fifthPage .content{
+    cursor:pointer;
+}
